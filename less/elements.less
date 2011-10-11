@@ -1,0 +1,365 @@
+/* =============================================================================
+   Headings, body text, lists, code, and more for a versatile and durable typography system
+   ========================================================================== */
+   
+p {
+	margin: 0;
+	margin-bottom: @baseline / 2;
+	
+	small {
+		font-size: @basefont - 2;
+		color: @grayLight;
+	}
+}
+
+
+
+
+// !Headings
+// ----------------------------------------- //
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-weight: bold;
+	color: @grayDark;
+	small {
+		color: @grayLight;
+	}
+}
+
+h1 {
+	margin-bottom: @baseline / 2;
+	font-size: 30px;
+	line-height: @baseline * 2;
+	small {
+		font-size: 18px;
+	}
+}
+
+h2 {
+	font-size: 24px;
+	line-height: @baseline * 2;
+	margin-bottom: @baseline * 0.2;
+	small {
+		font-size: 14px;
+	}
+}
+
+h3 {
+	font-size: 18px;
+	line-height: @baseline * 2.1;
+	small {
+		font-size: 14px;
+	}
+}
+
+h4 {
+	font-size: 16px;
+	line-height: @baseline * 1.7;
+	small {
+		font-size: 12px;
+	}
+}
+
+h5 {
+	font-size: 14px;
+	line-height: @baseline * 1.5;
+}
+
+h6 {
+	font-size: 13px;
+	line-height: @baseline * 1.5;
+	color: @grayLight;
+	text-transform: uppercase;
+}
+
+/* same color despite link */
+.colorfix,
+.colorfix a {
+	color: @grayDark;
+}
+
+/* == Titles style - make a distinction betwen headings == */
+.title {
+	border-bottom: 2px solid;
+	margin-bottom: @baseline * 0.7;	
+}
+h2.title {
+	margin-bottom: @baseline * 0.7;
+	line-height: @baseline * 1.7;
+}
+h3.title {
+	margin-bottom: @baseline * 0.7;
+	line-height: @baseline * 1.4;
+}
+h4.title {
+	margin-bottom: @baseline * 0.6;
+	line-height: @baseline * 1.4;
+}
+h5.title {
+	margin-bottom: @baseline * 0.6;
+	line-height: @baseline * 1.3;
+}
+h6.title {
+	margin-bottom: @baseline * 0.6;
+	line-height: @baseline * 1.4;
+}
+
+
+// !Misc
+// ----------------------------------------- //
+
+// Description Lists
+dl {
+	margin-bottom: @baseline;
+	
+	dt, dd {
+		line-height: @baseline;
+	}
+	
+	dt {
+		font-weight: bold;
+	}
+	
+	dd {
+		margin-left: @baseline / 2;
+	}
+}
+
+
+// Horizontal rules
+hr {
+	margin: 20px 0 19px;
+	border: 0;
+	border-bottom: 1px solid #eee;
+}
+
+
+// Emphasis
+strong {
+	font-style: inherit;
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+	font-weight: inherit;
+	line-height: inherit;
+}
+
+.muted {
+	color: @grayLight;
+}
+
+
+// Blockquotes
+blockquote {
+	margin-bottom: @baseline;
+	border-left: 5px solid #eee;
+	padding-left: 15px;
+	
+	p {
+		#font > .shorthand(300,14px,@baseline);
+		margin-bottom: 0;
+	}
+	
+	small {
+		display: block;
+		#font > .shorthand(300,12px,@baseline);
+		color: @grayLight;
+		&:before {
+			content: '\2014 \00A0';
+		}
+	}
+}
+
+
+// Addresses
+address {
+	display: block;
+	line-height: @baseline;
+	margin-bottom: @baseline;
+}
+
+
+// Inline and block code styles
+code, pre {
+	padding: 0 3px 2px;
+	font-family: Monaco, Andale Mono, Courier New, monospace;
+	font-size: 12px;
+	.border-radius(3px);
+}
+
+code {
+	background-color: lighten(@orange, 40%);
+	color: rgba(0,0,0,.75);
+	padding: 1px 3px;
+}
+
+pre {
+	background-color: #f5f5f5;
+	display: block;
+	padding: (@baseline - 1) / 2;
+	margin: 0 0 @baseline;
+	line-height: @baseline;
+	font-size: 12px;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,.15);
+	.border-radius(3px);
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+
+
+  
+/* !Forms  */
+/* ---------------------------------------------------- */
+input, 
+textarea {
+	margin: 0;
+	cursor: text;
+	padding: 6px 5px 6px 5px;
+
+	border: 1px solid #aaa;
+	color: #999;
+	background-color: #fff;
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
+	background-image: -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+	background-image: -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+	background-image: -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
+	background-image: -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%);
+	filter: ~"progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 )";
+	background-image: linear-gradient(top, #ffffff 85%,#eeeeee 99%);
+	
+	.transition-all(.1s);
+	
+	&:hover {
+	}
+	&:focus {
+		color: inherit;
+		.box-shadow(0 0 5px rgba(0,0,0,.3));
+		border: 1px solid #888;
+		outline: none;
+	}
+	/* Defined in patterns.less */
+	//&[type="button"],
+	//&[type="submit"],
+	//&[type="reset"] {
+	//	font-weight: bold;
+	//	padding: 8px 18px;
+	//	&:hover {
+	//		.box-shadow(0 0 5px rgba(0,0,0,.3));
+	//		border: 1px solid #888;
+	//	}
+	//	&:active {
+	//		.box-shadow(0 0 1px rgba(0,0,0,.2));
+	//		border-color: #999;
+	//	}
+	//}
+	
+	+ label {
+		padding-left: 10px;
+	}
+}
+input {
+	overflow: hidden;
+	height: auto !important;
+	height: 1%;
+}
+select {
+}
+textarea {
+	line-height: inherit;
+	resize:vertical;
+}
+.desc {
+	color: @gray;
+	padding-top: 2px;
+	padding-left: 10px;
+}
+
+
+
+
+/* !Fieldset */
+/* -------------------------------- */
+fieldset {
+	border: 1px solid @grayLight;
+	padding-top:18px;
+	padding-left:18px;
+	padding-right:18px;
+	padding-bottom:0px;
+	margin-bottom:18px;
+}
+fieldset legend {
+	background: none;
+	font-weight: bold;
+	padding: 0 24px;
+}
+
+
+
+
+/* !Images */
+/* -------------------------------- */
+
+figure {
+	padding: 15px;
+	border: 1px solid @grayLighter;
+	.border-radius(3px);
+}
+
+figcaption {
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: -5px;
+}
+
+
+
+
+/* !Table */
+/* -------------------------------- */
+table,
+th,
+tr,
+td {
+	border: 1px solid @grayLight;
+	padding: 6px;
+}
+table {
+	margin-bottom: 18px;
+	.box-shadow(0 0 3px rgba(0,0,0,0.2));
+}
+tr:nth-child(even),
+.even {
+	background: #f7f7f7;
+}
+tbody tr:hover {
+	background: #f0f0f0;
+	.box-shadow(inset 0 0 2px rgba(0,0,0,0.2));
+}
+thead,
+thead tr {
+	background: #eee;
+}
+tfoot tr {
+	background: #eee;
+}
+
+
+
+
+/* !Misc */
+/* -------------------------------- */
+
+.symbol {
+	font-family: "Arial", sans-serif;
+}

@@ -1,0 +1,599 @@
+/* =============================================================================
+   Repeatable UI elements outside the base styles provided from the scaffolding
+   ========================================================================== */
+
+
+/* ============================================================
+   Breadcrumbs
+   ========================================================= */
+
+.breadcrumb {
+	margin: 0 0 @baseline;
+	padding: 7px 14px;
+	border: 1px solid #ddd;
+	.border-radius(3px);
+	.box-shadow(inset 0 1px 0 @white);
+	
+	li {
+		display: inline;
+		text-shadow: 0 1px 0 @white;
+	}
+	
+	.divider {
+		padding: 0 5px;
+		color: @grayLight;
+	}
+  
+	a {
+	}
+
+	.active a {
+		color: @grayDark;
+	}
+}
+
+
+
+
+/* ============================================================
+   Button Styles
+   ========================================================= */
+
+// !Shared colors for buttons and alerts
+// ----------------------------------------- //
+.btn,
+.alert-message {
+	// Set text color
+	&.danger,
+	&.danger:hover,
+	&.error,
+	&.error:hover,
+	&.success,
+	&.success:hover,
+	&.info,
+	&.info:hover {
+		color: @white;
+	}
+	
+	// Danger and error appear as red
+	&.danger,
+	&.error {
+		.gradientBar(#ee5f5b, #c43c35);
+	}
+	
+	// Success appears as green
+	&.success {
+		.gradientBar(#62c462, #57a957);
+	}
+		
+	// Info appears as a neutral blue
+	&.info {
+		.gradientBar(#5bc0de, #339bb9);
+	}
+}
+
+// !Base .btn styles
+// ----------------------------------------- //
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.btn {
+	// Button Base
+	cursor: pointer;
+	display: inline-block;
+	#gradient > .vertical-three-colors(#ffffff, #ffffff, 25%, darken(#ffffff, 10%)); // Don't use .gradientbar() here since it does a three-color gradient
+	padding: 6px 14px 6px;
+	text-shadow: 0 1px 1px rgba(255,255,255,.75);
+	color: #333;
+	font-size: @basefont + 1;
+	line-height: normal;
+	border: 1px solid #ccc;
+	border-bottom-color: #bbb;
+	.border-radius(4px);
+	@shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+	.box-shadow(@shadow);
+	
+	&:hover {
+		background-position: 0 -15px;
+		color: #333;
+		text-decoration: none;
+	}
+	
+	// Focus state for keyboard and accessibility
+	&:focus {
+		outline: 1px dotted #666;
+	}
+	
+	// Primary Button Type
+	&.primary {
+		color: @white;
+		.gradientBar(@blue, @blueDark)
+	}
+	
+	 // Transitions
+	.transition(.1s linear all);
+	
+	// Active and Disabled states
+	&:active {
+		@shadow: inset 0 2px 4px rgba(0,0,0,.25), 0 1px 2px rgba(0,0,0,.05);
+		.box-shadow(@shadow);
+	}
+	&.disabled {
+		cursor: default;
+		background-image: none;
+		.reset-filter();
+		.opacity(65);
+		.box-shadow(none);
+	}
+	&[disabled] {
+		// disabled pseudo can't be included with .disabled
+		// def because IE8 and below will drop it ;_;
+		cursor: default;
+		background-image: none;
+		.reset-filter();
+		.opacity(65);
+		.box-shadow(none);
+	}
+	
+	// Button Sizes
+	&.large {
+		font-size: @basefont + 2px;
+		line-height: normal;
+		padding: 9px 14px 9px;
+		.border-radius(6px);
+	}
+	&.small {
+		padding: 7px 9px 7px;
+		font-size: @basefont - 2px;
+	}
+}
+
+input + input,
+.btn + .btn,
+.btn + input,
+input + .btn {
+	margin-left: 6px;
+}
+
+// Super jank hack for removing border-radius from IE9 so we can keep filter gradients on alerts and buttons
+:root .alert-message,
+:root .btn {
+	border-radius: 0 \0;
+}
+
+// Help Firefox not be a jerk about adding extra padding to buttons
+button.btn,
+input[type=submit].btn {
+	&::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	}
+}
+
+
+
+
+// !Close Icon
+// ----------------------------------------- //
+.close {
+	float: right;
+	color: @black;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: @baseline;
+	text-shadow: 0 1px 0 rgba(255,255,255,1);
+	.opacity(20);
+	&:hover {
+		color: @black;
+		text-decoration: none;
+		.opacity(40);
+	}
+}
+
+
+
+
+// !Error Styles
+// -----------------------------------------
+
+// Base alert styles
+.alert-message {
+	position: relative;
+	padding: 7px 15px;
+	margin-bottom: @baseline;
+	color: @grayDark;
+	.gradientBar(#fceec1, #eedc94); // warning by default
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	border-width: 1px;
+	border-style: solid;
+	.border-radius(4px);
+	.box-shadow(inset 0 1px 0 rgba(255,255,255,.25));
+	
+	// Adjust close icon
+	.close {
+		*margin-top: 3px; /* IE7 spacing */
+	}
+	
+	// Remove extra margin from content
+	h5 {
+		line-height: @baseline;
+	}
+	p {
+		margin-bottom: 0;
+	}
+	div {
+		margin-top: 5px;
+		margin-bottom: 2px;
+		line-height: 28px;
+	}
+	.btn {
+		// Provide actions with buttons
+		.box-shadow(0 1px 0 rgba(255,255,255,.25));
+	}
+	
+	&.block-message {
+		background-image: none;
+		background-color: lighten(#fceec1, 5%);
+		.reset-filter();
+		padding: 14px;
+		border-color: #fceec1;
+		.box-shadow(none);
+		ul, p {
+			margin-right: 30px;
+		}
+		ul {
+			margin-bottom: 0;
+		}
+		li {
+			color: @grayDark;
+		}
+		.alert-actions {
+			margin-top: 5px;
+		}
+		&.error,
+		&.success,
+		&.info {
+			color: @grayDark;
+			text-shadow: 0 1px 0 rgba(255,255,255,.5);
+		}
+		&.error {
+			background-color: lighten(#f56a66, 25%);
+			border-color: lighten(#f56a66, 20%);
+		}
+		&.success {
+			background-color: lighten(#62c462, 30%);
+			border-color: lighten(#62c462, 25%);
+		}
+		&.info {
+			background-color: lighten(#6bd0ee, 25%);
+			border-color: lighten(#6bd0ee, 20%);
+		}
+	}
+}
+
+
+
+/* ============================================================
+   Alignments
+   ========================================================= */
+
+.textcenter {
+	display: block;
+	text-align: center;
+}
+.textright {
+	display: block;
+	text-align: right;
+}
+
+/* == Images == */
+
+img {
+	margin: 0;
+	height: auto;
+	width: auto;
+}
+.alignleft,
+img.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 20px;
+	margin-top: 0px;
+}
+.alignright,
+img.alignright {
+	display: inline;
+	float: right;
+	margin-left: 20px;
+	margin-top: 0px;
+}
+.aligncenter,
+img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+img.alignleft,
+img.alignright,
+img.aligncenter {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.wp-caption {
+	img {
+		margin-bottom: 10px;
+	}
+	.wp-caption-text {
+		text-align: center;
+		color: #999;
+	}	
+}
+
+
+
+/* ============================================================
+   Non-responsive and Fixed Grid (Thank's to Harry Roberts from http://csswizardry.com)
+   ========================================================= */
+.grids{
+	clear:both;
+	max-width:960px;
+	margin:0 0 0 -20px;
+	list-style:none; /* So we can make grids out of lists */
+}
+
+//Ensure any grid item's FIRST class is a grid-<n> class. e.g.
+//VALID: class="grid-4 text-centre"
+//INVALID: class="left grid-4"
+
+[class^="grid-"]{
+	float:left;
+	margin:0 20px 0 0;
+}
+.grids [class^="grid-"]{
+	margin:0 0 0 20px;
+	//background: rgba(0,0,0,0.1);
+}
+
+.gridcenter {
+	float: none;
+	margin: 0 auto;
+}
+
+.end {
+	margin-right: 0;
+}
+
+.grid-1{ width:40px }
+.grid-2{ width:100px }
+.grid-3{ width:160px }
+.grid-4{ width:220px }
+.grid-5{ width:280px }
+.grid-6{ width:340px }
+.grid-7{ width:400px }
+.grid-8{ width:460px }
+.grid-9{ width:520px }
+.grid-10{ width:580px }
+.grid-11{ width:640px }
+.grid-12{ width:700px }
+.grid-13{ width:760px }
+.grid-14{ width:820px }
+.grid-15{ width:880px }
+.grid-16{ width:940px; margin:0 }
+
+
+
+
+/* ============================================================
+   Tabs
+   ========================================================= */
+
+.tabs {
+	//border-bottom: 1px solid #ececec;
+	border-bottom: 3px solid @grayLighter;
+	.border-radius(0 0 3px 3px);
+	> ul {
+		margin: 0;
+		padding: 0;
+		li {
+			float: left;
+			list-style: none;
+			
+			&:first-child a {
+				.border-radius(3px 0 0 0);
+			}
+			&:last-child a {
+				.border-radius(0 3px 0 0);
+			}
+		}
+		a {
+			color: @grayDark;
+			font-weight: bold;
+			display: inline-block;
+			background: @grayLighter;
+			padding: 8px 20px;
+			
+			.transition-all();
+			
+			&.active {
+				background: @grayDark;
+				color: @white;
+			}
+		}
+	}
+
+	> div {
+		.border-radius(0 3px 0 0);
+		padding: 10px 15px;
+		border-width: 3px 3px 0 3px;
+		border-style: solid;
+		border-color: @grayLighter;
+	}
+}
+
+.no-js .tabs > ul {
+	display: none;
+}
+
+
+
+/* ============================================================
+   Boxes / "Modules"
+   ========================================================= */
+   
+.module {
+	padding: 10px 15px;
+	border: 3px solid @grayLighter;
+	.border-radius(3px);
+	
+	.header {
+		background: @grayLighter;
+		margin: -10px -15px 10px -15px;
+		padding: 5px 15px 5px 15px;
+		
+		span {
+			color: @grayLight;
+			float: right;
+			padding-left: 10px;
+		}
+	}
+}
+
+.collapse {
+	padding-bottom: 0;
+	.header {
+		margin-bottom: -2px;
+		cursor: pointer;
+	}
+	> div {
+		margin-top: 12px;
+		padding-bottom: 10px;
+	}
+}
+
+
+
+/* =============================================================================
+   Menus - Dropdown menus using CSS and enhanceable using SuckerFish
+   ========================================================================== */
+.menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+.menu {
+	line-height:	1.0;
+}
+.menu li {
+	list-style: none;
+}
+.menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:			10em; /* left offset of submenus need to match (see below) */
+}
+.menu ul li {
+	width:			100%;
+}
+.menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.menu li {
+	float:			left;
+	position:		relative;
+}
+.menu a {
+	display:		block;
+	position:		relative;
+}
+
+/* Menu Height */
+.menu li:hover ul,
+.menu li.sfHover ul {
+	left:			0;
+	/*top:			2.5em; match top ul list item height */
+	z-index:		99;
+}
+/* / Menu Height */
+
+ul.menu li:hover li ul,
+ul.menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.menu li li:hover ul,
+ul.menu li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+ul.menu li li:hover li ul,
+ul.menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.menu li li li:hover ul,
+ul.menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+
+/*** arrows **/
+.sf-menu a.sf-with-ul {
+	padding-right: 	2.25em;
+	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+.sf-sub-indicator {
+	position:		absolute;
+	display:		block;
+	right:			.75em;
+	top:			1.05em; /* IE6 only */
+	width:			10px;
+	height:			10px;
+	text-indent: 	-999em;
+	overflow:		hidden;
+	background:		url('../images/arrows-ffffff.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+	top:			.8em;
+	background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+}
+/* apply hovers to modern browsers */
+a:focus > .sf-sub-indicator,
+a:hover > .sf-sub-indicator,
+a:active > .sf-sub-indicator,
+li:hover > a > .sf-sub-indicator,
+li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+
+/* point right for anchors in subs */
+.sf-menu ul .sf-sub-indicator { background-position:  -10px 0; }
+.sf-menu ul a > .sf-sub-indicator { background-position:  0 0; }
+/* apply hovers to modern browsers */
+.sf-menu ul a:focus > .sf-sub-indicator,
+.sf-menu ul a:hover > .sf-sub-indicator,
+.sf-menu ul a:active > .sf-sub-indicator,
+.sf-menu ul li:hover > a > .sf-sub-indicator,
+.sf-menu ul li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
+
+
+/* =============================================================================
+   Helper Classes
+   ========================================================================== */
+   
+//float right
+.fr {
+	float: right;
+}
+
+//float left
+.fl {
+	float: left;
+}
+
+//clear margin
+.cm {
+	margin: 0;
+}
