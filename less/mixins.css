@@ -1,8 +1,0 @@
-/* =============================================================================
-   Collection of Misc. Mixins
-   ========================================================================== */
-.background-clip {
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-}
