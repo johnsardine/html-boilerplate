@@ -176,10 +176,7 @@ sub {
    ========================================================================== */
 ul, ol {
   margin: 1em 0;
-  padding: 0 0 0 20px;
-}
-li {
-  list-style: inside;
+  padding: 0 0 0 40px;
 }
 dd {
   margin: 0 0 0 40px;
@@ -543,6 +540,9 @@ pre {
 }
 /* !Forms  */
 /* ---------------------------------------------------- */
+form p {
+  margin-bottom: 20px;
+}
 input, textarea {
   margin: 0;
   cursor: text;
@@ -1473,6 +1473,9 @@ img.alignleft, img.alignright, img.aligncenter {
 .menu {
   line-height: 1.0;
 }
+.menu li {
+  list-style: none;
+}
 .menu ul {
   position: absolute;
   top: -999em;
@@ -1578,6 +1581,18 @@ li.sfHover > a > .sf-sub-indicator {
   background-position: -10px 0;
   /* arrow hovers for modern browsers*/
 
+}
+/* =============================================================================
+   Helper Classes
+   ========================================================================== */
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.cm {
+  margin: 0;
 }
 /* =============================================================================
    Print styles.
