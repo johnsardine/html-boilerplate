@@ -7,9 +7,19 @@ jQuery(document).ready(function(){
 	jQuery('#jquery-test').hide();
 
 
+
+	/* ==== * Hide element after X time * ==== */
+	setTimeout(function(){
+		jQuery(".fade").fadeOut("slow", function () {
+			jQuery(".fade").hide();
+		});
+	}, 4000);
+	
+	
+
+	/* ==== * Easytabs * ==== */
 	if(jQuery().easytabs) {
 
-		/* ==== * Easytabs * ==== */
 		jQuery('.tabs').easytabs({
 			transitionIn: 'slideDown',
 			transitionOut: 'slideUp'
