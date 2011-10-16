@@ -14,8 +14,18 @@ jQuery(document).ready(function(){
 			jQuery(".fade").hide();
 		});
 	}, 4000);
-	
-	
+
+
+
+	/* ==== * Removing element after clicking close * ==== */
+	jQuery('.close').click(function () {
+		jQuery(this).parent().fadeOut('normal', function () {
+			jQuery(this).hide();
+		});
+		return false;
+	});
+
+
 
 	/* ==== * Easytabs * ==== */
 	if(jQuery().easytabs) {
@@ -30,7 +40,6 @@ jQuery(document).ready(function(){
 	
 	
 	/* ==== * Fancybox * ==== */
-	
 	if(jQuery().fancybox) {
 	
 		//Add fancybox to each image in .post with hyperlink

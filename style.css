@@ -372,7 +372,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.alpha,
+.beta,
+.gamma,
+.delta,
+.epsilon,
+.zeta {
   margin: 0;
   font-weight: bold;
   color: #404040;
@@ -382,44 +388,50 @@ h2 small,
 h3 small,
 h4 small,
 h5 small,
-h6 small {
+h6 small,
+.alpha small,
+.beta small,
+.gamma small,
+.delta small,
+.epsilon small,
+.zeta small {
   color: #bfbfbf;
 }
-h1 {
+h1, .alpha {
   margin-bottom: 10px;
   font-size: 30px;
   line-height: 40px;
 }
-h1 small {
+h1 small, .alpha small {
   font-size: 18px;
 }
-h2 {
+h2, .beta {
   font-size: 24px;
   line-height: 40px;
   margin-bottom: 4px;
 }
-h2 small {
+h2 small, .beta small {
   font-size: 14px;
 }
-h3 {
+h3, .gamma {
   font-size: 18px;
   line-height: 42px;
 }
-h3 small {
+h3 small, .gamma small {
   font-size: 14px;
 }
-h4 {
+h4, .delta {
   font-size: 16px;
   line-height: 34px;
 }
-h4 small {
+h4 small, .delta small {
   font-size: 12px;
 }
-h5 {
+h5, .epsilon {
   font-size: 14px;
   line-height: 30px;
 }
-h6 {
+h6, .zeta {
   font-size: 13px;
   line-height: 30px;
   color: #bfbfbf;
@@ -953,27 +965,27 @@ h6 a:hover {
    Button Styles
    ========================================================= */
 .btn.danger,
-.alert-message.danger,
+.message.danger,
 .btn.danger:hover,
-.alert-message.danger:hover,
+.message.danger:hover,
 .btn.error,
-.alert-message.error,
+.message.error,
 .btn.error:hover,
-.alert-message.error:hover,
+.message.error:hover,
 .btn.success,
-.alert-message.success,
+.message.success,
 .btn.success:hover,
-.alert-message.success:hover,
+.message.success:hover,
 .btn.info,
-.alert-message.info,
+.message.info,
 .btn.info:hover,
-.alert-message.info:hover {
+.message.info:hover {
   color: #ffffff;
 }
 .btn.danger,
-.alert-message.danger,
+.message.danger,
 .btn.error,
-.alert-message.error {
+.message.error {
   background-color: #c43c35;
   background-repeat: repeat-x;
   background-image: -khtml-gradient(linear, left top, left bottom, from(#ee5f5b), to(#c43c35));
@@ -987,7 +999,7 @@ h6 a:hover {
   border-color: #c43c35 #c43c35 #882a25;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
-.btn.success, .alert-message.success {
+.btn.success, .message.success {
   background-color: #57a957;
   background-repeat: repeat-x;
   background-image: -khtml-gradient(linear, left top, left bottom, from(#62c462), to(#57a957));
@@ -1001,7 +1013,7 @@ h6 a:hover {
   border-color: #57a957 #57a957 #3d773d;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
-.btn.info, .alert-message.info {
+.btn.info, .message.info {
   background-color: #339bb9;
   background-repeat: repeat-x;
   background-image: -khtml-gradient(linear, left top, left bottom, from(#5bc0de), to(#339bb9));
@@ -1169,7 +1181,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   filter: Alpha(Opacity= 40 );
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity= 40 );
 }
-.alert-message {
+.message {
   position: relative;
   padding: 7px 15px;
   margin-bottom: 20px;
@@ -1197,29 +1209,29 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
-.alert-message .close {
+.message .close {
   *margin-top: 3px;
   /* IE7 spacing */
 
 }
-.alert-message h5 {
+.message h5 {
   line-height: 20px;
 }
-.alert-message p {
+.message p {
   margin-bottom: 0;
 }
-.alert-message div {
+.message div {
   margin-top: 5px;
   margin-bottom: 2px;
   line-height: 28px;
 }
-.alert-message .btn {
+.message .btn {
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
   -o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
 }
-.alert-message.block-message {
+.message.block-message {
   background-image: none;
   background-color: #fdf5d9;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -1230,31 +1242,31 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
 }
-.alert-message.block-message ul, .alert-message.block-message p {
+.message.block-message ul, .message.block-message p {
   margin-right: 30px;
 }
-.alert-message.block-message ul {
+.message.block-message ul {
   margin-bottom: 0;
 }
-.alert-message.block-message li {
+.message.block-message li {
   color: #404040;
 }
-.alert-message.block-message .alert-actions {
+.message.block-message .alert-actions {
   margin-top: 5px;
 }
-.alert-message.block-message.error, .alert-message.block-message.success, .alert-message.block-message.info {
+.message.block-message.error, .message.block-message.success, .message.block-message.info {
   color: #404040;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
-.alert-message.block-message.error {
+.message.block-message.error {
   background-color: #fddfde;
   border-color: #fbc7c6;
 }
-.alert-message.block-message.success {
+.message.block-message.success {
   background-color: #d1eed1;
   border-color: #bfe7bf;
 }
-.alert-message.block-message.info {
+.message.block-message.info {
   background-color: #ddf4fb;
   border-color: #c6edf9;
 }
