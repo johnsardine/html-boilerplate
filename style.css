@@ -175,7 +175,7 @@ sub {
    Lists
    ========================================================================== */
 ul, ol {
-  margin: 1em 0;
+  margin: 0 0 1em 0;
   padding: 0 0 0 40px;
 }
 dd {
@@ -586,11 +586,6 @@ input:focus, textarea:focus {
 }
 input + label, textarea + label {
   padding-left: 10px;
-}
-input {
-  overflow: hidden;
-  height: auto !important;
-  height: 1%;
 }
 textarea {
   line-height: inherit;
@@ -1230,45 +1225,6 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   -o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
-}
-.message.block-message {
-  background-image: none;
-  background-color: #fdf5d9;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  padding: 14px;
-  border-color: #fceec1;
-  box-shadow: none;
-  -o-box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-}
-.message.block-message ul, .message.block-message p {
-  margin-right: 30px;
-}
-.message.block-message ul {
-  margin-bottom: 0;
-}
-.message.block-message li {
-  color: #404040;
-}
-.message.block-message .alert-actions {
-  margin-top: 5px;
-}
-.message.block-message.error, .message.block-message.success, .message.block-message.info {
-  color: #404040;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-}
-.message.block-message.error {
-  background-color: #fddfde;
-  border-color: #fbc7c6;
-}
-.message.block-message.success {
-  background-color: #d1eed1;
-  border-color: #bfe7bf;
-}
-.message.block-message.info {
-  background-color: #ddf4fb;
-  border-color: #c6edf9;
 }
 /* ============================================================
    Alignments
