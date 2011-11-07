@@ -406,33 +406,37 @@ h1 small, .alpha small {
 }
 h2, .beta {
   font-size: 24px;
-  line-height: 40px;
-  margin-bottom: 4px;
+  line-height: 34px;
+  margin-bottom: 8px;
 }
 h2 small, .beta small {
   font-size: 14px;
 }
 h3, .gamma {
   font-size: 18px;
-  line-height: 42px;
+  line-height: 26px;
+  margin-bottom: 8px;
 }
 h3 small, .gamma small {
   font-size: 14px;
 }
 h4, .delta {
   font-size: 16px;
-  line-height: 34px;
+  line-height: 24px;
+  margin-bottom: 4px;
 }
 h4 small, .delta small {
   font-size: 12px;
 }
 h5, .epsilon {
   font-size: 14px;
-  line-height: 30px;
+  line-height: 22px;
+  margin-bottom: 6px;
 }
 h6, .zeta {
   font-size: 13px;
-  line-height: 30px;
+  line-height: 22px;
+  margin-bottom: 2px;
   color: #bfbfbf;
   text-transform: uppercase;
 }
@@ -1560,6 +1564,13 @@ li.sfHover > a > .sf-sub-indicator {
 }
 .cm {
   margin: 0;
+}
+.clear-list {
+  list-style: none;
+  padding: 0;
+}
+.clear-list li {
+  list-style: none;
 }
 /* =============================================================================
    Print styles.
