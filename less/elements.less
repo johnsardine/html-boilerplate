@@ -255,7 +255,7 @@ textarea {
 	background-image: -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
 	background-image: -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
 	background-image: -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%);
-	filter: ~"progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 )";
+	//filter: ~"progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 )";
 	background-image: linear-gradient(top, #ffffff 85%,#eeeeee 99%);
 	
 	.transition-all(.1s);
@@ -287,6 +287,15 @@ textarea {
 	+ label {
 		padding-left: 10px;
 	}
+	
+	&.full {
+		width: 100%;
+	}
+}
+input[type="radio"],
+input[type="checkbox"] {
+	border: none;
+	background: none;
 }
 textarea {
 	line-height: inherit;
@@ -296,6 +305,11 @@ textarea {
 	color: @gray;
 	padding-top: 2px;
 	padding-left: 10px;
+}
+
+.full-field {
+	display: block;
+	padding-right: 12px;
 }
 
 
