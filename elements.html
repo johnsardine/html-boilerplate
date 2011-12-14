@@ -186,17 +186,17 @@
 			
 			<p>
 			<label><strong>Radio Buttons:</strong></label><br/>
-			<input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1<br/>
-			<input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2<br/>
-			<input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3<br/>
+			<input type="radio" class="radio" name="radio_button" value="radio_1" /><label>Radio 1</label><br/>
+			<input type="radio" class="radio" name="radio_button" value="radio_2" /><label>Radio 2</label><br/>
+			<input type="radio" class="radio" name="radio_button" value="radio_3" /><label>Radio 3</label><br/>
 			</p>
 			
 			<p>
 			<label><strong>Checkboxes:</strong></label><br/>
 			
-			<input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Radio 1<br/>
-			<input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Radio 2<br/>
-			<input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Radio 3
+			<input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /><label>Check 1</label><br/>
+			<input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /><label>Check 2</label><br/>
+			<input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /><label>Check 3</label><br/>
 			</p>
 			
 			<p><label><strong>Password:</strong></label><br/>
@@ -205,6 +205,30 @@
 			<p><label><strong>File Input:</strong></label><br/>
 			<input type="file" class="file" name="file" />
 			</p>
+			
+			<h4>Select and show</h4>
+			
+			<div class="checked-show">
+			    <input type="radio" name="payment_method" id="paypal" />
+			    <label for="paypal"><strong>PayPal</strong></label>
+			</div>
+			<div class="checked-info">
+			    <p>Paypal selected Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="checked-show">
+			    <input type="radio" name="payment_method" id="credit-card" />
+			    <label for="credit-card"><strong>Credit Card</strong></label>
+			</div>
+			<div class="checked-info">
+			    <p>Credit card selected Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="checked-show">
+			    <input type="radio" name="payment_method" id="bank-transfer" />
+			    <label for="bank-transfer"><strong>Bank Transfer</strong></label>
+			</div>
+			<div class="checked-info">
+			    <p>Bank transfer selected Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
 			
 			<p>
 			<input type="reset" value="Clear" />
@@ -468,10 +492,10 @@ nunc. Morbi imperdiet augue
 <!-- <script src="js/libs/jquery.js"></script> -->
 <script>window.jQuery || document.write('<script src="js/libs/jquery.js"><\/script>')</script>
 
-<!-- scripts concatenated and minified via ant build script-->
+<!-- scripts -->
 <script src="js/plugins/jquery.cookie.js"></script>
 <script src="js/plugins/jquery.easytabs.js"></script>
-<script src="js/plugins/jquery.fancybox.all.js"></script>
+<script src="fancybox/jquery.fancybox.all.js"></script>
 <script src="js/script.js"></script>
 <!-- end scripts-->
 

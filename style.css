@@ -600,6 +600,9 @@ textarea {
   line-height: inherit;
   resize: vertical;
 }
+input[type="radio"], input[type="checkbox"] {
+  cursor: pointer;
+}
 .desc {
   color: #808080;
   padding-top: 2px;
@@ -756,7 +759,9 @@ a:hover {
 .main, .sidebar {
   padding-top: 20px;
 }
-/* Layout variations */
+/* =============================================================================
+   Layout Organization
+   ========================================================================== */
 .layout-left .main, .layout-right .main {
   width: 640px;
 }
@@ -782,7 +787,6 @@ a:hover {
 .layout-right .sidebar {
   float: left;
 }
-/* == Layout == */
 /* =============================================================================
    Header
    ========================================================================== */
@@ -1442,6 +1446,21 @@ img.alignleft, img.alignright, img.aligncenter {
 .collapse > div {
   margin-top: 12px;
   padding-bottom: 10px;
+}
+/* ============================================================
+   Radio/Ckeckbox show on selection
+   ========================================================= */
+.checked-show {
+  padding-left: 2px;
+}
+.checked-info {
+  display: none;
+}
+.checked-info p {
+  margin-bottom: 0;
+}
+.no-js .checked-info {
+  display: block;
 }
 /* =============================================================================
    Menus - Dropdown menus using CSS and enhanceable using SuckerFish

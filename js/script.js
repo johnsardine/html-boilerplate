@@ -8,6 +8,17 @@ jQuery(document).ready(function(){
 
 
 
+	/* ==== * Show/hide Options based in radio selects * ==== */
+	jQuery('.checked-show').each(function() {
+		jQuery(this).find('input').click(function() {
+			jQuery('.checked-show').next('.checked-info').hide();
+			jQuery(this).parent('.checked-show').next().show();
+		});
+		jQuery(this).find('input:checked').parent('.checked-show').next().show();
+	});
+	
+
+
 	/* ==== * Hide element after X time * ==== */
 	setTimeout(function(){
 		jQuery(".fade").fadeOut("slow", function () {
@@ -35,6 +46,15 @@ jQuery(document).ready(function(){
 			transitionOut: 'slideUp'
 		});
 	
+	}
+	
+	/* ==== * Validate Form * ==== */
+	if (jQuery().validate) {
+		jQuery(".validate").validate({
+			errorElement: "label",
+			errorClass: "invalid",
+			validClass: "valid",
+		});
 	}
 	
 	
