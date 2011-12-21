@@ -33,7 +33,7 @@ h6,
 	margin: 0;
 	font-weight: bold;
 	small {
-		color: @grayLight;
+		color: @gray;
 	}
 }
 
@@ -345,12 +345,28 @@ figure {
 	padding: 15px;
 	border: 1px solid @grayLighter;
 	.border-radius(3px);
+	.box-shadow(0 0 0 transparent);
+	.transition-all(.2s);
+	overflow: hidden;
+	margin-bottom: 25px;
+	
+	&:hover {
+		border-color: @grayLight;
+		.box-shadow(0 1px 3px rgba(0,0,0,0.1));
+		margin-bottom: 0;
+		
+		figcaption {
+			//background: @grayLighter;
+			margin: 5px 0 -5px;
+		}
+	}
 }
 
 figcaption {
 	font-weight: bold;
 	text-align: center;
-	margin-bottom: -5px;
+	margin: 10px 0 -35px 0;
+	.transition-all(.2s);
 }
 
 

@@ -16,7 +16,7 @@ Tags:
 
 // Links
 @linkColor:         #f06529;
-@linkColorHover:    darken(@linkColor, 8);
+@linkColorHover:    darken(@linkColor, 10);
 
 //Clearfixing Elements
 .cf,
@@ -47,6 +47,9 @@ body.debug {
 	}
 }
 
+
+
+
 /* =============================================================================
 	Primary styles
 	Author: João Sardinha
@@ -62,7 +65,13 @@ body {
 }
 
 /* === Hyperlinks === */
-a,
+a {
+	color: @linkColor;
+	text-decoration: none;
+}
+a:visited {
+	color: @linkColor;
+}
 a:active {
 	color: @linkColor;
 	text-decoration: none;
@@ -100,6 +109,8 @@ a:hover {
 	//border-top: 3px solid #f5f5f5;
 	padding-top: @baseline;
 }
+
+
 
 
 /* =============================================================================
@@ -168,6 +179,8 @@ body {
 }
 
 
+
+
 /* =============================================================================
    Content
    ========================================================================== */
@@ -179,8 +192,16 @@ h1,h2,h3,h4,h5,h6 {
 		}
 	}
 }
-#content {
-}
+
+
+
+
+/* ===============================================================
+   Images
+   ============================================================ */
+
+
+
 
 /* =============================================================================
    Footer
@@ -190,6 +211,9 @@ h1,h2,h3,h4,h5,h6 {
 	margin-top: @baseline;
 	padding-top: @baseline;
 }
+
+
+
 
 /* =============================================================================
    Main Menu Navigation
@@ -293,6 +317,7 @@ h1,h2,h3,h4,h5,h6 {
 	padding: 9px;
 	margin: 0;
 }
+
 
 
 

@@ -19,7 +19,7 @@ Tags:
  * Kroc Camen, and the H5BP dev community and team.
  */
 /* =============================================================================
-   HTML5 element display
+   HTML5 display definitions
    ========================================================================== */
 article,
 aside,
@@ -33,35 +33,35 @@ nav,
 section {
   display: block;
 }
-audio[controls], canvas, video {
+audio, canvas, video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] {
+  display: none;
 }
 /* =============================================================================
    Base
    ========================================================================== */
 /*
  * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
- *    http://clagnut.com/blog/348/#c790
  * 2. Force vertical scrollbar in non-IE
- * 3. Remove Android and iOS tap highlight color to prevent entire container being highlighted
- *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
- * 4. Prevent iOS text size adjust on device orientation change, without disabling user zoom
- *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
  */
 html {
   font-size: 100%;
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 body {
   margin: 0;
-  font-size: 13px;
-  line-height: 1.231;
+  font-size: 1em;
+  line-height: 1.4;
 }
 body,
 button,
@@ -71,10 +71,10 @@ textarea {
   font-family: sans-serif;
   color: #222;
 }
-/* 
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate
- * No text-shadow: twitter.com/miketaylr/status/12228805301
- * Also: hot pink!
+ * Also: hot pink! (or customize the background color to match your design)
  */
 ::-moz-selection {
   background: #f06529;
@@ -92,10 +92,16 @@ textarea {
 a {
   color: #00e;
 }
+a:visited {
+  color: #551a8b;
+}
+a:hover {
+  color: #06e;
+}
 a:focus {
   outline: thin dotted;
 }
-/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
 a:hover, a:active {
   outline: 0;
 }
@@ -220,18 +226,18 @@ fieldset {
   margin: 0;
   padding: 0;
 }
-/* 
- * 1. Correct color not inheriting in IE6/7/8/9 
- * 2. Correct alignment displayed oddly in IE6/7 
+/* Indicate that 'label' will shift focus to the associated form element */
+label {
+  cursor: pointer;
+}
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
  */
 legend {
   border: 0;
   *margin-left: -7px;
   padding: 0;
-}
-/* Indicate that 'label' will shift focus to the associated form element */
-label {
-  cursor: pointer;
 }
 /*
  * 1. Correct font-size not inheriting in all browsers
@@ -249,15 +255,14 @@ textarea {
 }
 /*
  * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
- * 2. Correct inner spacing displayed oddly in IE6/7
  */
 button, input {
   line-height: normal;
-  *overflow: visible;
 }
 /*
  * 1. Display hand cursor for clickable form elements
  * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
  */
 button,
 input[type="button"],
@@ -265,30 +270,39 @@ input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
+  *overflow: visible;
 }
 /*
  * Consistent box sizing and appearance
  */
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
+  padding: 0;
 }
 input[type="search"] {
+  -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* 
- * Remove inner padding and border in FF3/4
- * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ 
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
  */
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-/* Remove default vertical scrollbar in IE6/7/8/9 */
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
 textarea {
   overflow: auto;
   vertical-align: top;
+  resize: vertical;
 }
 /* Colors for form validity */
 input:invalid, textarea:invalid {
@@ -308,23 +322,24 @@ table {
 /* For image replacement */
 .ir {
   display: block;
+  border: 0;
   text-indent: -999em;
   overflow: hidden;
+  background-color: transparent;
   background-repeat: no-repeat;
   text-align: left;
   direction: ltr;
+  *line-height: 0;
 }
 .ir br {
   display: none;
 }
-/* Hide for both screenreaders and browsers:
-   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+/* Hide from both screenreaders and browsers: h5bp.com/u */
 .hidden {
-  display: none;
+  display: none !important;
   visibility: hidden;
 }
-/* Hide only visually, but have it available for screenreaders: by Jon Neal.
-  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -335,7 +350,7 @@ table {
   position: absolute;
   width: 1px;
 }
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
@@ -347,6 +362,17 @@ table {
 /* Hide visually and from screenreaders, but maintain layout */
 .invisible {
   visibility: hidden;
+}
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
 }
 /* =============================================================================
    Collection of Misc. Mixins
@@ -394,7 +420,7 @@ h6 small,
 .delta small,
 .epsilon small,
 .zeta small {
-  color: #bfbfbf;
+  color: #808080;
 }
 h1, .alpha {
   margin-bottom: 10px;
@@ -635,11 +661,34 @@ figure {
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  box-shadow: 0 0 0 transparent;
+  -o-box-shadow: 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0 transparent;
+  transition: ease-in-out all 0.2s;
+  -moz-transition: ease-in-out all 0.2s;
+  -webkit-transition: ease-in-out all 0.2s;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+figure:hover {
+  border-color: #bfbfbf;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+}
+figure:hover figcaption {
+  margin: 5px 0 -5px;
 }
 figcaption {
   font-weight: bold;
   text-align: center;
-  margin-bottom: -5px;
+  margin: 10px 0 -35px 0;
+  transition: ease-in-out all 0.2s;
+  -moz-transition: ease-in-out all 0.2s;
+  -webkit-transition: ease-in-out all 0.2s;
 }
 /* !Table */
 /* -------------------------------- */
@@ -737,12 +786,19 @@ body {
   *font-size: small;
 }
 /* === Hyperlinks === */
-a, a:active {
+a {
+  color: #f06529;
+  text-decoration: none;
+}
+a:visited {
+  color: #f06529;
+}
+a:active {
   color: #f06529;
   text-decoration: none;
 }
 a:hover {
-  color: #e04f10;
+  color: #d74b0f;
   text-decoration: underline;
 }
 /* =============================================================================
@@ -827,6 +883,9 @@ h5 a:hover,
 h6 a:hover {
   text-decoration: none;
 }
+/* ===============================================================
+   Images
+   ============================================================ */
 /* =============================================================================
    Footer
    ========================================================================== */
