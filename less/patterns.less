@@ -357,6 +357,8 @@ img.aligncenter {
 	> ul {
 		margin: 0;
 		padding: 0;
+		
+		//tab selector container (li)
 		li {
 			float: left;
 			list-style: none;
@@ -368,6 +370,8 @@ img.aligncenter {
 				.border-radius(0 3px 0 0);
 			}
 		}
+		
+		//tab selector styling
 		a {
 			color: @grayDark;
 			font-weight: bold;
@@ -377,6 +381,7 @@ img.aligncenter {
 			
 			.transition-all();
 			
+			//active tab
 			&.active {
 				background: @grayDark;
 				color: @white;
@@ -384,6 +389,7 @@ img.aligncenter {
 		}
 	}
 
+	//divs with the content
 	> div {
 		.border-radius(0 3px 0 0);
 		padding: 10px 15px;
@@ -393,6 +399,7 @@ img.aligncenter {
 	}
 }
 
+//hide tabs wien no javascript
 .no-js .tabs > ul {
 	display: none;
 }
