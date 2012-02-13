@@ -48,6 +48,25 @@ jQuery(document).ready(function(){
 	
 	}
 	
+	
+	/* ==== * jQuery Slides * ==== */
+	if (jQuery().slides) {
+		jQuery('#slides').slides({
+			preload: false,
+			generatePagination: false,
+			play: 5000,
+			pause: 5000,
+			effect: 'fade',
+			crossfade: false,
+			hoverPause: false,
+			autoHeight: true,
+			slidesLoaded: function () {
+				$(".slides_control").height($(".slides_control img:first").height());
+			}
+		});	
+	}
+	
+	
 	/* ==== * Validate Form * ==== */
 	if (jQuery().validate) {
 		jQuery(".validate").validate({
