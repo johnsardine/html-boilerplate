@@ -764,9 +764,8 @@ tfoot tr {
 .menu,
 nav,
 .menu,
-#header,
-#main,
-#footer,
+.header,
+.footer,
 .grids,
 .tabs {
   zoom: 1;
@@ -775,18 +774,16 @@ nav,
 .menu:before,
 nav:before,
 .menu:before,
-#header:before,
-#main:before,
-#footer:before,
+.header:before,
+.footer:before,
 .grids:before,
 .tabs:before,
 .cf:after,
 .menu:after,
 nav:after,
 .menu:after,
-#header:after,
-#main:after,
-#footer:after,
+.header:after,
+.footer:after,
 .grids:after,
 .tabs:after {
   content: "";
@@ -796,9 +793,8 @@ nav:after,
 .menu:after,
 nav:after,
 .menu:after,
-#header:after,
-#main:after,
-#footer:after,
+.header:after,
+.footer:after,
 .grids:after,
 .tabs:after {
   clear: both;
@@ -852,6 +848,21 @@ a:hover {
 /* =============================================================================
    Layout Organization
    ========================================================================== */
+.layout-left,
+.layout-right {
+  zoom: 1;
+}
+.layout-left:before,
+.layout-right:before,
+.layout-left:after,
+.layout-right:after {
+  content: "";
+  display: table;
+}
+.layout-left:after,
+.layout-right:after {
+  clear: both;
+}
 .layout-left .main,
 .layout-right .main {
   width: 640px;
@@ -882,7 +893,7 @@ a:hover {
 /* =============================================================================
    Header
    ========================================================================== */
-#header {
+.header {
   padding-top: 30px;
   position: relative;
   border-bottom: 3px solid #f5f5f5;
@@ -890,7 +901,7 @@ a:hover {
 body {
   border-top: 3px solid #f06529;
 }
-#logo {
+.logo {
   position: relative;
   z-index: 1;
 }
