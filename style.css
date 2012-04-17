@@ -8,9 +8,6 @@ Author: João Sardinha
 Author URI: http://johnsardine.com/
 Tags: 
 */
-/* Variables.less
- * Variables to customize the look and feel of Bootstrap
- * ----------------------------------------------------- */
 /*
  * HTML5 Boilerplate
  *
@@ -609,13 +606,18 @@ pre {
 form p {
   margin-bottom: 20px;
 }
+::-webkit-input-placeholder {
+  color: #999;
+}
+:-moz-placeholder {
+  color: #999;
+}
 input,
 textarea {
   margin: 0;
   cursor: text;
   padding: 6px 5px 6px 5px;
   border: 1px solid #aaa;
-  color: #999;
   background-color: #fff;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #ffffff), color-stop(0.99, #eeeeee));
   background-image: -webkit-linear-gradient(center bottom, #ffffff 85%, #eeeeee 99%);
@@ -631,7 +633,6 @@ textarea {
 }
 input:focus,
 textarea:focus {
-  color: inherit;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -760,43 +761,15 @@ tfoot tr {
 .symbol {
   font-family: "Arial", sans-serif;
 }
-.cf,
-.menu,
-nav,
-.menu,
-.header,
-.footer,
-.grids,
-.tabs {
+.cf {
   zoom: 1;
 }
 .cf:before,
-.menu:before,
-nav:before,
-.menu:before,
-.header:before,
-.footer:before,
-.grids:before,
-.tabs:before,
-.cf:after,
-.menu:after,
-nav:after,
-.menu:after,
-.header:after,
-.footer:after,
-.grids:after,
-.tabs:after {
+.cf:after {
   content: "";
   display: table;
 }
-.cf:after,
-.menu:after,
-nav:after,
-.menu:after,
-.header:after,
-.footer:after,
-.grids:after,
-.tabs:after {
+.cf:after {
   clear: both;
 }
 body.debug * {
@@ -894,9 +867,18 @@ a:hover {
    Header
    ========================================================================== */
 .header {
+  zoom: 1;
   padding-top: 30px;
   position: relative;
   border-bottom: 3px solid #f5f5f5;
+}
+.header:before,
+.header:after {
+  content: "";
+  display: table;
+}
+.header:after {
+  clear: both;
 }
 body {
   border-top: 3px solid #f06529;
@@ -937,9 +919,18 @@ h6 a:hover {
    Footer
    ========================================================================== */
 .footer {
+  zoom: 1;
   border-top: 1px dotted #bfbfbf;
   margin-top: 20px;
   padding-top: 20px;
+}
+.footer:before,
+.footer:after {
+  content: "";
+  display: table;
+}
+.footer:after {
+  clear: both;
 }
 /* =============================================================================
    Main Menu Navigation
@@ -1039,12 +1030,9 @@ h6 a:hover {
 @media only screen and (min-width: 768px) {
   /* Style adjustments for viewports 768px and over go here */
 }
-/* =============================================================================
-   Repeatable UI elements outside the base styles provided from the scaffolding
-   ========================================================================== */
-/* ============================================================
+/* =====================================================
    Breadcrumbs
-   ========================================================= */
+   =================================================== */
 .breadcrumb {
   margin: 0 0 20px;
   padding: 7px 14px;
@@ -1068,9 +1056,9 @@ h6 a:hover {
 .breadcrumb .active a {
   color: #404040;
 }
-/* ============================================================
+/* =====================================================
    Button Styles
-   ========================================================= */
+   ================================================== */
 .btn.danger,
 .message.danger,
 .btn.danger:hover,
@@ -1342,9 +1330,9 @@ input[type=submit].btn::-moz-focus-inner {
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
 }
-/* ============================================================
+/* =====================================================
    Alignments
-   ========================================================= */
+   ================================================== */
 .textcenter {
   display: block;
   text-align: center;
@@ -1393,16 +1381,25 @@ img.aligncenter {
   text-align: center;
   color: #999;
 }
-/* ============================================================
+/* =====================================================
    Non-responsive and Fixed Grid (Thank's to Harry Roberts from http://csswizardry.com)
-   ========================================================= */
+   ================================================== */
 .grids {
+  zoom: 1;
   clear: both;
   max-width: 960px;
   margin: 0 0 0 -20px;
   list-style: none;
   /* So we can make grids out of lists */
 
+}
+.grids:before,
+.grids:after {
+  content: "";
+  display: table;
+}
+.grids:after {
+  clear: both;
 }
 [class^="grid-"] {
   float: left;
@@ -1467,14 +1464,23 @@ img.aligncenter {
   width: 940px;
   margin: 0;
 }
-/* ============================================================
+/* =====================================================
    Tabs
-   ========================================================= */
+   ================================================== */
 .tabs {
+  zoom: 1;
   border-bottom: 3px solid #e6e6e6;
   border-radius: 0 0 3px 3px;
   -moz-border-radius: 0 0 3px 3px;
   -webkit-border-radius: 0 0 3px 3px;
+}
+.tabs:before,
+.tabs:after {
+  content: "";
+  display: table;
+}
+.tabs:after {
+  clear: both;
 }
 .tabs > ul {
   margin: 0;
@@ -1520,9 +1526,9 @@ img.aligncenter {
 .no-js .tabs > ul {
   display: none;
 }
-/* ============================================================
+/* =====================================================
    Boxes / "Modules"
-   ========================================================= */
+   ================================================== */
 .module {
   padding: 10px 15px;
   border: 3px solid #e6e6e6;
@@ -1551,9 +1557,9 @@ img.aligncenter {
   margin-top: 12px;
   padding-bottom: 10px;
 }
-/* ============================================================
+/* =====================================================
    Radio/Ckeckbox show on selection
-   ========================================================= */
+   ================================================== */
 .checked-show {
   padding-left: 2px;
 }
@@ -1566,9 +1572,9 @@ img.aligncenter {
 .no-js .checked-info {
   display: block;
 }
-/* =============================================================================
+/* =====================================================
    Menus - Dropdown menus using CSS and enhanceable using SuckerFish
-   ========================================================================== */
+   ================================================== */
 .menu,
 .sf-menu * {
   margin: 0;
@@ -1576,7 +1582,16 @@ img.aligncenter {
   list-style: none;
 }
 .menu {
+  zoom: 1;
   line-height: 1.0;
+}
+.menu:before,
+.menu:after {
+  content: "";
+  display: table;
+}
+.menu:after {
+  clear: both;
 }
 .menu li {
   list-style: none;
@@ -1692,9 +1707,9 @@ li.sfHover > a > .sf-sub-indicator {
   /* arrow hovers for modern browsers*/
 
 }
-/* =============================================================================
+/* =====================================================
    Helper Classes
-   ========================================================================== */
+   ================================================== */
 .fr {
   float: right;
 }
