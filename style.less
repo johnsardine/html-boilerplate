@@ -14,19 +14,24 @@ Tags:
 @import url("less/mixins.less");
 @import url("less/elements.less");
 
+// Grays
+@black:             #000;
+@grayDark:          lighten(@black, 25%);
+@gray:              lighten(@black, 50%);
+@grayLight:         lighten(@black, 75%);
+@grayLighter:       lighten(@black, 90%);
+@white:             #fff;
+
 // Links
 @linkColor:         #f06529;
 @linkColorHover:    darken(@linkColor, 10);
 
+// Baseline grid
+@basefont:          12px;
+@baseline:          20px;
+
 //Clearfixing Elements
-.cf,
-.menu,
-nav,
-.menu,
-.header,
-.footer,
-.grids,
-.tabs {
+.cf {
 	zoom: 1;
 	
 	&:before,
@@ -160,6 +165,7 @@ a:hover {
    ========================================================================== */
 
 .header {
+	.cf;
 	padding-top: 30px;
 	position: relative;
 	border-bottom: 3px solid #f5f5f5;
@@ -207,6 +213,7 @@ h1,h2,h3,h4,h5,h6 {
    Footer
    ========================================================================== */
 .footer {
+	.cf;
 	border-top: 1px dotted @grayLight;
 	margin-top: @baseline;
 	padding-top: @baseline;
