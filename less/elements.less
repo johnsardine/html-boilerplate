@@ -239,14 +239,19 @@ form {
 		margin-bottom: @baseline;
 	}
 }
+::-webkit-input-placeholder {
+   color: #999;
+}
+
+:-moz-placeholder {
+   color: #999;
+}
 input, 
 textarea {
 	margin: 0;
 	cursor: text;
 	padding: 6px 5px 6px 5px;
-
 	border: 1px solid #aaa;
-	color: #999;
 	background-color: #fff;
 	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
 	background-image: -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
@@ -261,7 +266,6 @@ textarea {
 	&:hover {
 	}
 	&:focus {
-		color: inherit;
 		.box-shadow(0 0 5px rgba(0,0,0,.3));
 		border: 1px solid #888;
 		outline: none;
