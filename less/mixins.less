@@ -72,6 +72,12 @@
     line-height: @lineHeight;
   }
 }
+.font-size(@sizeValue){
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 10);
+  font-size: ~"@{pxValue}px";
+  font-size: ~"@{remValue}rem";
+}
 
 // Gradient Bar Colors for buttons and allerts
 .gradientBar(@primaryColor, @secondaryColor) {
