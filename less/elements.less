@@ -376,30 +376,30 @@ figcaption {
 
 /* !Table */
 /* -------------------------------- */
-table,
-th,
-tr,
-td {
+.table,
+.table th,
+.table tr,
+.table td {
 	border: 1px solid @grayLight;
 	padding: 6px;
 }
-table {
+.table table {
 	margin-bottom: 18px;
 	.box-shadow(0 0 3px rgba(0,0,0,0.2));
 }
-tr:nth-child(even),
-.even {
+.table tr:nth-child(even),
+.table .even {
 	background: #f7f7f7;
 }
-tbody tr:hover {
+.table tbody tr:hover {
 	background: #f0f0f0;
 	.box-shadow(inset 0 0 2px rgba(0,0,0,0.2));
 }
-thead,
-thead tr {
+.table thead,
+.table thead tr {
 	background: #eee;
 }
-tfoot tr {
+.table tfoot tr {
 	background: #eee;
 }
 
