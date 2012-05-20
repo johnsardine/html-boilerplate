@@ -33,10 +33,24 @@
 	background-clip:        padding-box;
 }
 
+.border-box () {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
 .border-radius(@borderradius: 3px) {
 	border-radius:          @borderradius;
 	-moz-border-radius:     @borderradius;
 	-webkit-border-radius:  @borderradius;
+}
+
+.text-overflow () {
+	white-space: nowrap;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis; /* or "clip" */
 }
 
 //Opacity
@@ -81,10 +95,18 @@
 
 // Gradient Bar Colors for buttons and allerts
 .gradientBar(@primaryColor, @secondaryColor) {
-  #gradient > .vertical(@primaryColor, @secondaryColor);
-  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-  border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
-  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
+	#gradient > .vertical(@primaryColor, @secondaryColor);
+	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+	border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
+	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
+	
+	&:hover {
+		border-color: darken(@secondaryColor, 10%) darken(@secondaryColor, 10%) darken(@secondaryColor, 20%);
+		border-color: rgba(0,0,0,.2) rgba(0,0,0,.2) fadein(rgba(0,0,0,.2), 15%);
+	}
+	&:active {
+		#gradient > .vertical(darken(@primaryColor, 20%), @secondaryColor);
+	}
 }
 
 // Gradients
