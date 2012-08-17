@@ -1,11 +1,11 @@
 /*
 Theme Name: HTML Framework
 Theme URI: Developement
-Description: 
+Description:
 Version: 2
 Author: João Sardinha
 Author URI: http://johnsardine.com/
-Tags: 
+Tags:
 */
 
 //Imports
@@ -33,13 +33,13 @@ Tags:
 //Clearfixing Elements
 .cf {
 	zoom: 1;
-	
+
 	&:before,
 	&:after {
 		content:"";
 		display:table;
 	}
-	
+
 	&:after {
 		clear: both;
 	}
@@ -57,7 +57,7 @@ body.debug {
 /* ================================================ */
 /* ! Primary Styling */
 /* ================================================ */
-   
+
 body {
 	margin: 0 auto;
 	color: @grayDark;
@@ -179,7 +179,7 @@ body {
 	z-index: 1;
 }
 
-#navigation {
+.navigation {
 	margin-top: 20px;
 	border-bottom: 1px solid lighten(@black, 90%);
 }
@@ -228,30 +228,28 @@ h1,h2,h3,h4,h5,h6 {
 /* ! Main Menu Naavigation */
 /* ================================================ */
 
-#navigation {
+.navigation {
 	font-size: 13px;
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	left: 0;
 }
-.ie6 #navigation {
+.ie6 .navigation {
 	position: static;
 	display: block;
 }
-#navigation ul,
-#navigation li{
+.navigation ul,
+.navigation li{
 	margin: 0;
 }
 /* Menu positioning */
-#navigation .menu {
+.navigation .menu {
 	display: block;
 	float: right;
 }
-#header {
-}
 /* globar hyperlink style */
-#navigation a {
+.navigation a {
 	font-weight: bold;
 	font-size: @basefont + 1;
 	color: lighten(@black, 60%);
@@ -265,35 +263,35 @@ h1,h2,h3,h4,h5,h6 {
 	top:			35px; /* make this match - ajust accordingly*/
 }
 /* Hyperlink on hover*/
-#navigation li:hover>a {
+.navigation li:hover>a {
 	color: #333;
 	background: #f9f9f9;
 	//background: lighten(@black, 95%);
 	text-decoration: none;
 }
 /* Current menu item */
-#navigation .current>a {
+.navigation .current>a {
 	color: #333;
 }
 /* top level menu */
-#navigation>ul>li {
+.navigation>ul>li {
 	//border-right: 5px solid red; /* note:stupid*/
 }
 /* top level hyperlink */
-#navigation>ul>li>a {
+.navigation>ul>li>a {
 	//border-top: 1px solid;
 	//border-bottom: 1px solid; uncomment for pretty border bottom
 	//border-color: lighten(@black, 90%); same as above
 }
-#navigation>ul>li>a,
-#navigation>ul>li:hover>a {
+.navigation>ul>li>a,
+.navigation>ul>li:hover>a {
 	background: none;
 }
-#navigation>ul>li:first-child>a {} //first top menu item
-#navigation>ul>li:last-child>a {} //last top menu item
+.navigation>ul>li:first-child>a {} //first top menu item
+.navigation>ul>li:last-child>a {} //last top menu item
 
 /* first dropdown */
-#navigation>ul>li>ul {
+.navigation>ul>li>ul {
 	margin-left: -3px;
 	padding: 0 3px 3px 3px;
 	.border-radius(0 0 3px 3px);
@@ -310,14 +308,14 @@ h1,h2,h3,h4,h5,h6 {
 	}
 }
 /* Following dropdowns */
-#navigation ul ul ul {
+.navigation ul ul ul {
 	padding: 3px;
 	.border-radius(0 3px 3px 3px);
 	background: lighten(@black, 90%);
 	background: rgba(0,0,0,0.1); //lighten(@black, 90%);
 }
 //both dropdowns
-#navigation>ul ul {
+.navigation>ul ul {
 }
 
 

@@ -2,19 +2,13 @@
 /*
 Theme Name: HTML Framework
 Theme URI: Developement
-Description: 
+Description:
 Version: 2
 Author: João Sardinha
 Author URI: http://johnsardine.com/
-Tags: 
+Tags:
 */
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+/*! normalize.css v1.0.0 | MIT License | git.io/normalize */
 /* =============================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -68,7 +62,6 @@ input,
 select,
 textarea {
   font-family: sans-serif;
-  color: #222;
 }
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -209,7 +202,7 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 /*
- * Correct overflow displayed oddly in IE9 
+ * Correct overflow displayed oddly in IE9
  */
 svg:not(:root) {
   overflow: hidden;
@@ -886,7 +879,7 @@ body {
   position: relative;
   z-index: 1;
 }
-#navigation {
+.navigation {
   margin-top: 20px;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -934,36 +927,34 @@ h6 a:hover {
 /* ================================================ */
 /* ! Main Menu Naavigation */
 /* ================================================ */
-#navigation {
+.navigation {
   font-size: 13px;
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
 }
-.ie6 #navigation {
+.ie6 .navigation {
   position: static;
   display: block;
 }
-#navigation ul,
-#navigation li {
+.navigation ul,
+.navigation li {
   margin: 0;
 }
 /* Menu positioning */
-#navigation .menu {
+.navigation .menu {
   display: block;
   float: right;
 }
 /* globar hyperlink style */
-#navigation a {
+.navigation a {
   font-weight: bold;
   font-size: 13px;
   color: #999999;
   background: #ffffff;
   padding: 0 14px;
   height: 35px;
-  /* make this match */
-
   line-height: 35px;
   /* make this match */
 
@@ -975,23 +966,23 @@ h6 a:hover {
 
 }
 /* Hyperlink on hover*/
-#navigation li:hover > a {
+.navigation li:hover > a {
   color: #333;
   background: #f9f9f9;
   text-decoration: none;
 }
 /* Current menu item */
-#navigation .current > a {
+.navigation .current > a {
   color: #333;
 }
 /* top level menu */
 /* top level hyperlink */
-#navigation > ul > li > a,
-#navigation > ul > li:hover > a {
+.navigation > ul > li > a,
+.navigation > ul > li:hover > a {
   background: none;
 }
 /* first dropdown */
-#navigation > ul > li > ul {
+.navigation > ul > li > ul {
   margin-left: -3px;
   padding: 0 3px 3px 3px;
   border-radius: 0 0 3px 3px;
@@ -1001,16 +992,16 @@ h6 a:hover {
   background: #e6e6e6;
   background: rgba(0, 0, 0, 0.1);
 }
-#navigation > ul > li > ul > li:first-child > a {
+.navigation > ul > li > ul > li:first-child > a {
   border-top: 3px solid #f5f5f5;
 }
-#navigation > ul > li > ul a {
+.navigation > ul > li > ul a {
   height: auto;
   padding: 10px 14px;
   line-height: 1.2em;
 }
 /* Following dropdowns */
-#navigation ul ul ul {
+.navigation ul ul ul {
   padding: 3px;
   border-radius: 0 3px 3px 3px;
   -moz-border-radius: 0 3px 3px 3px;
