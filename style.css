@@ -1,4 +1,4 @@
-@import url("fancybox/jquery.fancybox.min.css");
+@import 'fancybox/jquery.fancybox.min.css';
 /*
 Theme Name: HTML Framework
 Theme URI: Developement
@@ -759,7 +759,7 @@ figcaption {
 }
 .cf:before,
 .cf:after {
-  content: "";
+  content: '';
   display: table;
 }
 .cf:after {
@@ -821,7 +821,7 @@ a:hover {
 .layout-right:before,
 .layout-left:after,
 .layout-right:after {
-  content: "";
+  content: '';
   display: table;
 }
 .layout-left:after,
@@ -866,7 +866,7 @@ a:hover {
 }
 .header:before,
 .header:after {
-  content: "";
+  content: '';
   display: table;
 }
 .header:after {
@@ -918,7 +918,7 @@ h6 a:hover {
 }
 .footer:before,
 .footer:after {
-  content: "";
+  content: '';
   display: table;
 }
 .footer:after {
@@ -1487,7 +1487,7 @@ img.aligncenter {
 }
 .grids:before,
 .grids:after {
-  content: "";
+  content: '';
   display: table;
 }
 .grids:after {
@@ -1568,7 +1568,7 @@ img.aligncenter {
 }
 .tabs:before,
 .tabs:after {
-  content: "";
+  content: '';
   display: table;
 }
 .tabs:after {
@@ -1679,7 +1679,7 @@ img.aligncenter {
 }
 .menu:before,
 .menu:after {
-  content: "";
+  content: '';
   display: table;
 }
 .menu:after {
