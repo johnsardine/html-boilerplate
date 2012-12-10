@@ -1,0 +1,69 @@
+// Grid width (960) + 1 gutter
+@gridRefWidth: 972; // 16 - 976 / 12 - 972
+@gridRefGutter: 12; // 16 - 16 / 12 - 12
+@gridRefColumn: 69; // 16 - 45 / 12 - 69
+@gridColumns: 12; // 16 - 16 / 12 - 12
+
+//@gridRefColumnWidth: (@gridRefWidth + @gridRefGutter) / @gridColumns;
+@gridRefColumnWidth: @gridRefColumn + @gridRefGutter;
+
+//@gridWidth: @gridRefWidth;
+//@gridGutter: @gridRefGutter;
+//@gridColumnWidth: @gridRefColumnWidth;
+
+@gridWidth: 100;
+@gridGutter: (@gridRefGutter * @gridWidth) / @gridRefWidth;
+@gridColumnWidth: (@gridRefColumnWidth * @gridWidth) / @gridRefWidth;
+
+//@gridUnit: 1px;
+@gridUnit: 1%;
+
+.column(@column) {
+	width: ((@gridColumnWidth * @column) - @gridGutter) * @gridUnit;
+}
+
+.column-1	{ .column(1); }
+.column-2	{ .column(2); }
+.column-3	{ .column(3); }
+.column-4	{ .column(4); }
+.column-5	{ .column(5); }
+.column-6	{ .column(6); }
+.column-7	{ .column(7); }
+.column-8	{ .column(8); }
+.column-9	{ .column(9); }
+.column-10	{ .column(10); }
+.column-11	{ .column(11); }
+.column-12	{ .column(12); }
+.column-13	{ .column(13); }
+.column-14	{ .column(14); }
+.column-15	{ .column(15); }
+.column-16	{ .column(16); }
+
+.column-1 	,
+.column-2 	,
+.column-3 	,
+.column-4 	,
+.column-5 	,
+.column-6 	,
+.column-7 	,
+.column-8 	,
+.column-9 	,
+.column-10	,
+.column-11	,
+.column-12	,
+.column-13	,
+.column-14	,
+.column-15	,
+.column-16	{
+	float: left;
+	position: relative;
+	margin-left: @gridGutter * @gridUnit;
+}
+
+.row {
+	.cf;
+//	position: relative;
+//	overflow: hidden;
+	margin-left: @gridGutter * -@gridUnit;
+	width: (@gridWidth + @gridGutter) * @gridUnit;
+}
