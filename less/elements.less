@@ -1,11 +1,11 @@
-/* =============================================================================
-   Headings, body text, lists, code, and more for a versatile and durable typography system
-   ========================================================================== */
-   
+/* ================================================ */
+/* ! General Elements */
+/* ================================================ */
+
 p {
 	margin: 0;
 	margin-bottom: @baseline / 2;
-	
+
 	small {
 		font-size: @basefont - 2;
 		color: @grayLight;
@@ -15,8 +15,9 @@ p {
 
 
 
-// !Headings
-// ----------------------------------------- //
+/* ================================================ */
+/* ! Headings */
+/* ================================================ */
 
 h1,
 h2,
@@ -99,10 +100,11 @@ h6,
 	color: @grayDark;
 }
 
-/* == Titles style - make a distinction betwen headings == */
+/* Titles style - make a distinction betwen headings */
+
 .title {
 	border-bottom: 2px solid;
-	margin-bottom: @baseline * 0.7;	
+	margin-bottom: @baseline * 0.7;
 }
 h2.title {
 	margin-bottom: @baseline * 0.7;
@@ -126,28 +128,34 @@ h6.title {
 }
 
 
-// !Misc
-// ----------------------------------------- //
 
-// Description Lists
+
+/* ================================================ */
+/* ! Misc */
+/* ================================================ */
+
+
+/* Definition Lists */
+
 dl {
 	margin-bottom: @baseline;
-	
+
 	dt, dd {
 		line-height: @baseline;
 	}
-	
+
 	dt {
 		font-weight: bold;
 	}
-	
+
 	dd {
 		margin-left: @baseline / 2;
 	}
 }
 
 
-// Horizontal rules
+/* Horizontal rules */
+
 hr {
 	margin: 20px 0 19px;
 	border: 0;
@@ -155,7 +163,8 @@ hr {
 }
 
 
-// Emphasis
+/* Emphasis */
+
 strong {
 	font-style: inherit;
 	font-weight: bold;
@@ -172,17 +181,18 @@ em {
 }
 
 
-// Blockquotes
+/* Blockquotes */
+
 blockquote {
 	margin-bottom: @baseline;
 	border-left: 5px solid #eee;
 	padding-left: 15px;
-	
+
 	p {
 		#font > .shorthand(300,14px,@baseline);
 		margin-bottom: 0;
 	}
-	
+
 	small {
 		display: block;
 		#font > .shorthand(300,12px,@baseline);
@@ -194,7 +204,8 @@ blockquote {
 }
 
 
-// Addresses
+/* Addresses */
+
 address {
 	display: block;
 	line-height: @baseline;
@@ -202,7 +213,7 @@ address {
 }
 
 
-// Inline and block code styles
+/* Inline and block code styles */
 code, pre {
 	padding: 0 3px 2px;
 	font-family: Monaco, Andale Mono, Courier New, monospace;
@@ -229,11 +240,17 @@ pre {
 	word-wrap: break-word;
 }
 
+.symbol {
+	font-family: "Arial", sans-serif;
+}
 
 
-  
-/* !Forms  */
-/* ---------------------------------------------------- */
+
+
+/* ================================================ */
+/* ! Forms */
+/* ================================================ */
+
 form {
 	p {
 		margin-bottom: @baseline;
@@ -246,7 +263,7 @@ form {
 :-moz-placeholder {
    color: #999;
 }
-input, 
+input,
 textarea {
 	margin: 0;
 	cursor: text;
@@ -260,9 +277,9 @@ textarea {
 	background-image: -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%);
 	//filter: ~"progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 )";
 	background-image: linear-gradient(top, #ffffff 85%,#eeeeee 99%);
-	
+
 	.transition-all(.1s);
-	
+
 	&:hover {
 	}
 	&:focus {
@@ -285,11 +302,11 @@ textarea {
 	//		border-color: #999;
 	//	}
 	//}
-	
+
 	+ label {
 		padding-left: 10px;
 	}
-	
+
 	&.full {
 		width: 100%;
 	}
@@ -321,8 +338,10 @@ input[type="checkbox"] {
 
 
 
-/* !Fieldset */
-/* -------------------------------- */
+/* ================================================ */
+/* ! Fieldset */
+/* ================================================ */
+
 fieldset {
 	border: 1px solid @grayLight;
 	padding-top:18px;
@@ -340,8 +359,9 @@ fieldset legend {
 
 
 
-/* !Images */
-/* -------------------------------- */
+/* ================================================ */
+/* ! Images */
+/* ================================================ */
 
 figure {
 	padding: 15px;
@@ -351,12 +371,12 @@ figure {
 	.transition-all(.2s);
 	overflow: hidden;
 	margin-bottom: 25px;
-	
+
 	&:hover {
 		border-color: @grayLight;
 		.box-shadow(0 1px 3px rgba(0,0,0,0.1));
 		margin-bottom: 0;
-		
+
 		figcaption {
 			//background: @grayLighter;
 			margin: 5px 0 -5px;
@@ -374,8 +394,10 @@ figcaption {
 
 
 
-/* !Table */
-/* -------------------------------- */
+/* ================================================ */
+/* ! Table */
+/* ================================================ */
+
 .table,
 .table th,
 .table tr,
@@ -401,14 +423,4 @@ figcaption {
 }
 .table tfoot tr {
 	background: #eee;
-}
-
-
-
-
-/* !Misc */
-/* -------------------------------- */
-
-.symbol {
-	font-family: "Arial", sans-serif;
 }

@@ -1,6 +1,6 @@
-/* =====================================================
-   Breadcrumbs
-   =================================================== */
+/* ================================================ */
+/* ! Breadcrumbs */
+/* ================================================ */
 
 .breadcrumb {
 	margin: 0 0 @baseline;
@@ -8,17 +8,17 @@
 	border: 1px solid #ddd;
 	.border-radius(3px);
 	.box-shadow(inset 0 1px 0 @white);
-	
+
 	li {
 		display: inline;
 		text-shadow: 0 1px 0 @white;
 	}
-	
+
 	.divider {
 		padding: 0 5px;
 		color: @grayLight;
 	}
-  
+
 	a {
 	}
 
@@ -30,12 +30,12 @@
 
 
 
-/* =====================================================
-   Button Styles
-   ================================================== */
+/* ================================================ */
+/* ! Button Styles */
+/* ================================================ */
 
-// !Shared colors for buttons and alerts
-// ----------------------------------------- //
+/* !Shared colors for buttons and alerts */
+
 .btn,
 .message {
 	// Set text color
@@ -49,26 +49,26 @@
 	&.info:hover {
 		color: @white;
 	}
-	
+
 	// Danger and error appear as red
 	&.danger,
 	&.error {
 		.gradientBar(#ee5f5b, #c43c35);
 	}
-	
+
 	// Success appears as green
 	&.success {
 		.gradientBar(#62c462, #57a957);
 	}
-		
+
 	// Info appears as a neutral blue
 	&.info {
 		.gradientBar(#5bc0de, #339bb9);
 	}
 }
 
-// !Base .btn styles
-// ----------------------------------------- //
+/* Base Button Style */
+
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
@@ -87,28 +87,28 @@ input[type="reset"],
 	.gradientBar(#fff, darken(#fff, 10%));
 	color: @grayDark;
 	text-shadow: 0 1px 1px rgba(255,255,255,.75);
-	
+
 	&:hover {
 		background-position: 0 -15px;
 		color: #333;
 		text-decoration: none;
 		//border-color: #aaa;
 	}
-	
+
 	// Focus state for keyboard and accessibility
 	&:focus {
 		outline: 1px dotted #666;
 	}
-	
+
 	// Primary Button Type
 	&.primary {
 	    color: @white;
 	    .gradientBar(#596578, #434c59);
 	}
-	
+
 	 // Transitions
 	.transition(.1s linear all);
-	
+
 	// Active and Disabled states
 	&:active {
 		@shadow: inset 0 2px 4px rgba(0,0,0,.25), 0 1px 2px rgba(0,0,0,.05);
@@ -130,7 +130,7 @@ input[type="reset"],
 		.opacity(65);
 		.box-shadow(none);
 	}
-	
+
 	// Button Sizes
 	&.large {
 		font-size: @basefont + 2px;
@@ -168,8 +168,10 @@ input[type=submit].btn {
 
 
 
-// !Close Icon
-// ----------------------------------------- //
+/* ================================================ */
+/* ! Close Icon */
+/* ================================================ */
+
 .close {
 	float: right;
 	color: @black;
@@ -188,10 +190,12 @@ input[type=submit].btn {
 
 
 
-// !Error Styles
-// -----------------------------------------
+/* ================================================ */
+/* ! Error Styles */
+/* ================================================ */
 
-// Base alert styles
+/* Base alert styles */
+
 .message {
 	position: relative;
 	padding: 7px 15px;
@@ -203,12 +207,12 @@ input[type=submit].btn {
 	border-style: solid;
 	.border-radius(4px);
 	.box-shadow(inset 0 1px 0 rgba(255,255,255,.25));
-	
+
 	// Adjust close icon
 	.close {
 		*margin-top: 3px; /* IE7 spacing */
 	}
-	
+
 	// Remove extra margin from content
 	h5 {
 		line-height: @baseline;
@@ -229,9 +233,9 @@ input[type=submit].btn {
 
 
 
-/* =====================================================
-   Alignments
-   ================================================== */
+/* ================================================ */
+/* ! Alignments */
+/* ================================================ */
 
 .textcenter {
 	display: block;
@@ -242,7 +246,7 @@ input[type=submit].btn {
 	text-align: right;
 }
 
-/* == Images == */
+/* Images */
 
 img {
 	margin: 0;
@@ -284,19 +288,15 @@ img.aligncenter {
 	.wp-caption-text {
 		text-align: center;
 		color: #999;
-	}	
-}
-
 	}
 }
 
 
 
 
-
-/* =====================================================
-   Tabs
-   ================================================== */
+/* ================================================ */
+/* ! Tabs */
+/* ================================================ */
 
 .tabs {
 	.cf;
@@ -306,12 +306,12 @@ img.aligncenter {
 	> ul {
 		margin: 0;
 		padding: 0;
-		
+
 		//tab selector container (li)
 		li {
 			float: left;
 			list-style: none;
-			
+
 			&:first-child a {
 				.border-radius(3px 0 0 0);
 			}
@@ -319,7 +319,7 @@ img.aligncenter {
 				.border-radius(0 3px 0 0);
 			}
 		}
-		
+
 		//tab selector styling
 		a {
 			color: @grayDark;
@@ -327,9 +327,9 @@ img.aligncenter {
 			display: inline-block;
 			background: @grayLighter;
 			padding: 8px 20px;
-			
+
 			.transition-all();
-			
+
 			//active tab
 			&.active {
 				background: @grayDark;
@@ -355,20 +355,20 @@ img.aligncenter {
 
 
 
-/* =====================================================
-   Boxes / "Modules"
-   ================================================== */
-   
+/* ================================================ */
+/* ! Boxes / Modules */
+/* ================================================ */
+
 .module {
 	padding: 10px 15px;
 	border: 3px solid @grayLighter;
 	.border-radius(3px);
-	
+
 	.module-header {
 		background: @grayLighter;
 		margin: -10px -15px 10px -15px;
 		padding: 5px 15px 5px 15px;
-		
+
 		span {
 			color: @grayLight;
 			float: right;
@@ -392,15 +392,16 @@ img.aligncenter {
 
 
 
-/* =====================================================
-   Radio/Ckeckbox show on selection
-   ================================================== */
+/* ================================================ */
+/* ! Radio/Ckeckbox show on selection */
+/* ================================================ */
+
 .checked-show {
 	padding-left: 2px;
 }
 .checked-info {
 	display: none;
-	
+
 	p {
 		margin-bottom: 0;
 	}
@@ -409,9 +410,14 @@ img.aligncenter {
 	display: block;
 }
 
-/* =====================================================
-   Menus - Dropdown menus using CSS and enhanceable using SuckerFish
-   ================================================== */
+
+
+
+
+/* ================================================ */
+/* ! Dropdown Menus */
+/* ================================================ */
+
 .menu, .sf-menu * {
 	margin:			0;
 	padding:		0;
@@ -515,10 +521,11 @@ li.sfHover > a > .sf-sub-indicator {
 
 
 
-/* =====================================================
-   Helper Classes
-   ================================================== */
-   
+
+/* ================================================ */
+/* ! Helper Classes */
+/* ================================================ */
+
 //float right
 .fr {
 	float: right;

@@ -1,4 +1,3 @@
-/* Author:
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;
@@ -22,7 +21,6 @@
     }
 }());
 
-*/
 jQuery(document).ready(function(){
 
 	/* ==== * Jquery Test * ==== */
@@ -38,7 +36,7 @@ jQuery(document).ready(function(){
 		});
 		jQuery(this).find('input:checked').parent('.checked-show').next().show();
 	});
-	
+
 
 
 	/* ==== * Hide element after X time * ==== */
@@ -67,10 +65,10 @@ jQuery(document).ready(function(){
 			transitionIn: 'slideDown',
 			transitionOut: 'slideUp'
 		});
-	
+
 	}
-	
-	
+
+
 	/* ==== * jQuery Slides * ==== */
 	if (jQuery().slides) {
 		jQuery('#slides').slides({
@@ -85,10 +83,10 @@ jQuery(document).ready(function(){
 			slidesLoaded: function () {
 				$(".slides_control").height($(".slides_control img:first").height());
 			}
-		});	
+		});
 	}
-	
-	
+
+
 	/* ==== * Validate Form * ==== */
 	if (jQuery().validate) {
 		jQuery(".validate").validate({
@@ -97,44 +95,44 @@ jQuery(document).ready(function(){
 			validClass: "valid",
 		});
 	}
-	
-	
-	
+
+
+
 	/* ==== * Fancybox * ==== */
 	if(jQuery().fancybox) {
-	
+
 		//Add fancybox to each image in .post with hyperlink
 		var $thumbnails = 'a:has(img)[href$=".bmp"],a:has(img)[href$=".gif"],a:has(img)[href$=".jpg"],a:has(img)[href$=".jpeg"],a:has(img)[href$=".png"],a:has(img)[href$=".BMP"],a:has(img)[href$=".GIF"],a:has(img)[href$=".JPG"],a:has(img)[href$=".JPEG"],a:has(img)[href$=".PNG"]';
-		
-		
+
+
 		var $posts = jQuery('.post');
-		
+
 		$posts.each(function() {
 		    jQuery(this).find($thumbnails).addClass("fancybox").attr('rel','fancybox'+$posts.index(this))
 		});
-		
+
 		jQuery(".fancybox, a[rel=gallery]").fancybox({
 			'padding' : 10,
 			'modal' : false,
 			'opacity' : true,
-			
+
 			'overlayShow' : true,
 			'overlayOpacity' : 0.3,
 			'overlayColor' : '#fff',
-			
+
 			'transitionIn'		: 'elastic',
 			'transitionOut'		: 'elastic',
-			
+
 			'easingIn' : 'swing',
 			'easingOut' : 'swing',
-			
+
 			'autoScale' : false,
 			'autoDimensions' : false,
 			'centerOnScroll' : false,
-			
+
 			'hideOnOverlayClick' : true,
 			'hideOnContentClick' : true,
-			
+
 			'showCloseButton'	 : true,
 			'showNavArrows' : true,
 			'enableEscapeButton' : true,
@@ -212,5 +210,5 @@ jQuery(document).ready(function(){
 			jQuery.cookie(cookieName, cookieValue, { path: '/', expires: 10 });//set cookie
 		}
 	);
-	
+
 });

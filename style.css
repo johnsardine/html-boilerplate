@@ -378,17 +378,17 @@ table {
 .clearfix {
   *zoom: 1;
 }
-/* =============================================================================
-   Collection of Misc. Mixins
-   ========================================================================== */
+/* ================================================ */
+/* ! Mixins */
+/* ================================================ */
 .background-clip {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-/* =============================================================================
-   Headings, body text, lists, code, and more for a versatile and durable typography system
-   ========================================================================== */
+/* ================================================ */
+/* ! General Elements */
+/* ================================================ */
 p {
   margin: 0;
   margin-bottom: 10px;
@@ -397,6 +397,9 @@ p small {
   font-size: 10px;
   color: #bfbfbf;
 }
+/* ================================================ */
+/* ! Headings */
+/* ================================================ */
 h1,
 h2,
 h3,
@@ -485,7 +488,7 @@ h6,
 .colorfix a {
   color: #404040;
 }
-/* == Titles style - make a distinction betwen headings == */
+/* Titles style - make a distinction betwen headings */
 .title {
   border-bottom: 2px solid;
   margin-bottom: 14px;
@@ -510,6 +513,10 @@ h6.title {
   margin-bottom: 12px;
   line-height: 28px;
 }
+/* ================================================ */
+/* ! Misc */
+/* ================================================ */
+/* Definition Lists */
 dl {
   margin-bottom: 20px;
 }
@@ -523,11 +530,13 @@ dl dt {
 dl dd {
   margin-left: 10px;
 }
+/* Horizontal rules */
 hr {
   margin: 20px 0 19px;
   border: 0;
   border-bottom: 1px solid #eee;
 }
+/* Emphasis */
 strong {
   font-style: inherit;
   font-weight: bold;
@@ -540,6 +549,7 @@ em {
 .muted {
   color: #bfbfbf;
 }
+/* Blockquotes */
 blockquote {
   margin-bottom: 20px;
   border-left: 5px solid #eee;
@@ -561,11 +571,13 @@ blockquote small {
 blockquote small:before {
   content: '\2014 \00A0';
 }
+/* Addresses */
 address {
   display: block;
   line-height: 20px;
   margin-bottom: 20px;
 }
+/* Inline and block code styles */
 code,
 pre {
   padding: 0 3px 2px;
@@ -594,8 +606,12 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-/* !Forms  */
-/* ---------------------------------------------------- */
+.symbol {
+  font-family: "Arial", sans-serif;
+}
+/* ================================================ */
+/* ! Forms */
+/* ================================================ */
 form p {
   margin-bottom: 20px;
 }
@@ -663,8 +679,9 @@ input[type="checkbox"] {
   display: block;
   padding-right: 12px;
 }
-/* !Fieldset */
-/* -------------------------------- */
+/* ================================================ */
+/* ! Fieldset */
+/* ================================================ */
 fieldset {
   border: 1px solid #bfbfbf;
   padding-top: 18px;
@@ -678,8 +695,9 @@ fieldset legend {
   font-weight: bold;
   padding: 0 24px;
 }
-/* !Images */
-/* -------------------------------- */
+/* ================================================ */
+/* ! Images */
+/* ================================================ */
 figure {
   padding: 15px;
   border: 1px solid #e6e6e6;
@@ -715,8 +733,9 @@ figcaption {
   -moz-transition: ease-in-out all 0.2s;
   -webkit-transition: ease-in-out all 0.2s;
 }
-/* !Table */
-/* -------------------------------- */
+/* ================================================ */
+/* ! Table */
+/* ================================================ */
 .table,
 .table th,
 .table tr,
@@ -749,10 +768,86 @@ figcaption {
 .table tfoot tr {
   background: #eee;
 }
-/* !Misc */
-/* -------------------------------- */
-.symbol {
-  font-family: "Arial", sans-serif;
+.column-1 {
+  width: 7.098765432098766%;
+}
+.column-2 {
+  width: 15.4320987654321%;
+}
+.column-3 {
+  width: 23.765432098765434%;
+}
+.column-4 {
+  width: 32.098765432098766%;
+}
+.column-5 {
+  width: 40.4320987654321%;
+}
+.column-6 {
+  width: 48.76543209876543%;
+}
+.column-7 {
+  width: 57.098765432098766%;
+}
+.column-8 {
+  width: 65.4320987654321%;
+}
+.column-9 {
+  width: 73.76543209876543%;
+}
+.column-10 {
+  width: 82.09876543209877%;
+}
+.column-11 {
+  width: 90.4320987654321%;
+}
+.column-12 {
+  width: 98.76543209876543%;
+}
+.column-13 {
+  width: 107.09876543209877%;
+}
+.column-14 {
+  width: 115.4320987654321%;
+}
+.column-15 {
+  width: 123.76543209876544%;
+}
+.column-16 {
+  width: 132.0987654320988%;
+}
+.column-1,
+.column-2,
+.column-3,
+.column-4,
+.column-5,
+.column-6,
+.column-7,
+.column-8,
+.column-9,
+.column-10,
+.column-11,
+.column-12,
+.column-13,
+.column-14,
+.column-15,
+.column-16 {
+  float: left;
+  position: relative;
+  margin-left: 1.2345679012345678%;
+}
+.row {
+  zoom: 1;
+  margin-left: -1.2345679012345678%;
+  width: 101.23456790123457%;
+}
+.row:before,
+.row:after {
+  content: '';
+  display: table;
+}
+.row:after {
+  clear: both;
 }
 .cf {
   zoom: 1;
@@ -1018,9 +1113,9 @@ h6 a:hover {
 @media only screen and (min-width: 768px) {
   /* Style adjustments for viewports 768px and over go here */
 }
-/* =====================================================
-   Breadcrumbs
-   =================================================== */
+/* ================================================ */
+/* ! Breadcrumbs */
+/* ================================================ */
 .breadcrumb {
   margin: 0 0 20px;
   padding: 7px 14px;
@@ -1044,9 +1139,10 @@ h6 a:hover {
 .breadcrumb .active a {
   color: #404040;
 }
-/* =====================================================
-   Button Styles
-   ================================================== */
+/* ================================================ */
+/* ! Button Styles */
+/* ================================================ */
+/* !Shared colors for buttons and alerts */
 .btn.danger,
 .message.danger,
 .btn.danger:hover,
@@ -1167,6 +1263,7 @@ h6 a:hover {
   background-image: -o-linear-gradient(top, #2390b0, #339bb9);
   background-image: linear-gradient(top, #2390b0, #339bb9);
 }
+/* Base Button Style */
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
@@ -1339,6 +1436,9 @@ input[type=submit].btn::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
+/* ================================================ */
+/* ! Close Icon */
+/* ================================================ */
 .close {
   float: right;
   color: #000000;
@@ -1357,6 +1457,10 @@ input[type=submit].btn::-moz-focus-inner {
   filter: Alpha(Opacity= 40 );
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity= 40 );
 }
+/* ================================================ */
+/* ! Error Styles */
+/* ================================================ */
+/* Base alert styles */
 .message {
   position: relative;
   padding: 7px 15px;
@@ -1422,9 +1526,9 @@ input[type=submit].btn::-moz-focus-inner {
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
 }
-/* =====================================================
-   Alignments
-   ================================================== */
+/* ================================================ */
+/* ! Alignments */
+/* ================================================ */
 .textcenter {
   display: block;
   text-align: center;
@@ -1433,7 +1537,7 @@ input[type=submit].btn::-moz-focus-inner {
   display: block;
   text-align: right;
 }
-/* == Images == */
+/* Images */
 img {
   margin: 0;
   height: auto;
@@ -1473,92 +1577,9 @@ img.aligncenter {
   text-align: center;
   color: #999;
 }
-/* =====================================================
-   Non-responsive and Fixed Grid (Thank's to Harry Roberts from http://csswizardry.com)
-   ================================================== */
-.grids {
-  zoom: 1;
-  clear: both;
-  max-width: 960px;
-  margin: 0 0 0 -20px;
-  list-style: none;
-  /* So we can make grids out of lists */
-
-}
-.grids:before,
-.grids:after {
-  content: '';
-  display: table;
-}
-.grids:after {
-  clear: both;
-}
-[class^="grid-"] {
-  float: left;
-  margin: 0 20px 0 0;
-}
-.grids [class^="grid-"] {
-  margin: 0 0 0 20px;
-}
-.gridcenter {
-  float: none;
-  margin: 0 auto;
-}
-.end {
-  margin-right: 0;
-}
-.grid-1 {
-  width: 40px;
-}
-.grid-2 {
-  width: 100px;
-}
-.grid-3 {
-  width: 160px;
-}
-.grid-4 {
-  width: 220px;
-}
-.grid-5 {
-  width: 280px;
-}
-.grid-6 {
-  width: 340px;
-}
-.grid-7 {
-  width: 400px;
-}
-.grid-8 {
-  width: 460px;
-}
-.grid-9 {
-  width: 520px;
-}
-.grid-10 {
-  width: 580px;
-}
-.grid-11 {
-  width: 640px;
-}
-.grid-12 {
-  width: 700px;
-}
-.grid-13 {
-  width: 760px;
-}
-.grid-14 {
-  width: 820px;
-}
-.grid-15 {
-  width: 880px;
-}
-.grid-16 {
-  width: 940px;
-  margin: 0;
-}
-/* =====================================================
-   Tabs
-   ================================================== */
+/* ================================================ */
+/* ! Tabs */
+/* ================================================ */
 .tabs {
   zoom: 1;
   border-bottom: 3px solid #e6e6e6;
@@ -1618,9 +1639,9 @@ img.aligncenter {
 .no-js .tabs > ul {
   display: none;
 }
-/* =====================================================
-   Boxes / "Modules"
-   ================================================== */
+/* ================================================ */
+/* ! Boxes / Modules */
+/* ================================================ */
 .module {
   padding: 10px 15px;
   border: 3px solid #e6e6e6;
@@ -1649,9 +1670,9 @@ img.aligncenter {
   margin-top: 12px;
   padding-bottom: 10px;
 }
-/* =====================================================
-   Radio/Ckeckbox show on selection
-   ================================================== */
+/* ================================================ */
+/* ! Radio/Ckeckbox show on selection */
+/* ================================================ */
 .checked-show {
   padding-left: 2px;
 }
@@ -1664,9 +1685,9 @@ img.aligncenter {
 .no-js .checked-info {
   display: block;
 }
-/* =====================================================
-   Menus - Dropdown menus using CSS and enhanceable using SuckerFish
-   ================================================== */
+/* ================================================ */
+/* ! Dropdown Menus */
+/* ================================================ */
 .menu,
 .sf-menu * {
   margin: 0;
@@ -1799,9 +1820,9 @@ li.sfHover > a > .sf-sub-indicator {
   /* arrow hovers for modern browsers*/
 
 }
-/* =====================================================
-   Helper Classes
-   ================================================== */
+/* ================================================ */
+/* ! Helper Classes */
+/* ================================================ */
 .fr {
   float: right;
 }

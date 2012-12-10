@@ -1,6 +1,6 @@
-/* =============================================================================
-   Collection of Misc. Mixins
-   ========================================================================== */
+/* ================================================ */
+/* ! Mixins */
+/* ================================================ */
 
 // Transitions
 .transition(@transition) {
@@ -11,14 +11,14 @@
 	        transition: @transition;
 }
 
-//Global Transition
+// Global Transition
 .transition-all (@duration: 0.3s) {
 			transition: ease-in-out all @duration;
 	   -moz-transition: ease-in-out all @duration;
 	-webkit-transition: ease-in-out all @duration;
 }
 
-//Box Shadow
+// Box Shadow
 .box-shadow (@boxshadow: 0 1px 3px rgba(0,0,0,0.5)) {
 			box-shadow: @boxshadow;
 		 -o-box-shadow: @boxshadow;
@@ -26,9 +26,9 @@
 	-webkit-box-shadow: @boxshadow;
 }
 
+// Background clip to allow borders to blend properly with the background
 .background-clip {
-	// Background clip to allow borders to blend properly with the background
-	-moz-background-clip:   padding; 
+	-moz-background-clip:   padding;
 	-webkit-background-clip:padding-box;
 	background-clip:        padding-box;
 }
@@ -53,9 +53,9 @@
 	text-overflow: ellipsis; /* or "clip" */
 }
 
-//Opacity
+// Opacity
 .opacity(@alpha: 50) {
-	opacity: @alpha/100; 
+	opacity: @alpha/100;
 	filter: e("Alpha(Opacity=")@alpha e(")");
 	-ms-filter: e("progid:DXImageTransform.Microsoft.Alpha(Opacity=")@alpha e(")");
 }
@@ -99,7 +99,7 @@
 	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 	border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
 	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
-	
+
 	&:hover {
 		border-color: darken(@secondaryColor, 10%) darken(@secondaryColor, 10%) darken(@secondaryColor, 20%);
 		border-color: rgba(0,0,0,.2) rgba(0,0,0,.2) fadein(rgba(0,0,0,.2), 15%);
