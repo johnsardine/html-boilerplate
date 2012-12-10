@@ -873,6 +873,7 @@ body {
   font-size: 12px;
   line-height: 20px;
   *font-size: small;
+  -webkit-font-smoothing: antialiased;
 }
 /* === Hyperlinks === */
 a {
