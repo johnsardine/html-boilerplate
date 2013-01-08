@@ -92,6 +92,157 @@ a:hover {
 
 
 /* ================================================ */
+/* ! Abstractions */
+/* ================================================ */
+
+/* Margins */
+.mt {
+	margin-top: @baseline;
+}
+.mt-half {
+	margin-top: @baseline / 2;
+}
+.mt-double {
+	margin-top: @baseline * 2;
+}
+
+.mb {
+	margin-bottom: @baseline;
+}
+.mb-half {
+	margin-bottom: @baseline / 2;
+}
+.mb-double {
+	margin-bottom: @baseline * 2;
+}
+
+.ml {
+	margin-left: @baseline;
+}
+.ml-half {
+	margin-left: @baseline / 2;
+}
+.ml-double {
+	margin-left: @baseline * 2;
+}
+
+.mr {
+	margin-right: @baseline;
+}
+.mr-half {
+	margin-right: @baseline / 2;
+}
+.mr-double {
+	margin-right: @baseline * 2;
+}
+
+/* Paddings */
+.pt {
+	margin-top: @baseline;
+}
+.pt-half {
+	margin-top: @baseline / 2;
+}
+.pt-double {
+	margin-top: @baseline * 2;
+}
+
+.pb {
+	margin-bottom: @baseline;
+}
+.pb-half {
+	margin-bottom: @baseline / 2;
+}
+.pb-double {
+	margin-bottom: @baseline * 2;
+}
+
+.pl {
+	margin-left: @baseline;
+}
+.pl-half {
+	margin-left: @baseline / 2;
+}
+.pl-double {
+	margin-left: @baseline * 2;
+}
+
+.pr {
+	margin-right: @baseline;
+}
+.pr-half {
+	margin-right: @baseline / 2;
+}
+.pr-double {
+	margin-right: @baseline * 2;
+}
+
+/* Styling */
+.uppercase {
+	text-transform: uppercase;
+}
+
+/* Navigations */
+.nav {
+	.cf;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	> li {
+		float: left;
+	}
+
+	a {
+		display: inline-block;
+	}
+}
+
+.nav-dropdown {
+
+	> li > ul {
+		top: 100%;
+	}
+
+	ul {
+		width: 100px;
+		position: absolute;
+		left: 0;
+		z-index: 1;
+		display: none;
+
+		ul {
+			top: 0;
+			left: 100%;
+		}
+
+		a,
+		li {
+			display: block;
+		}
+	}
+
+	li {
+		position: relative;
+	}
+	a:focus + ul {
+		display: block;
+	}
+	li:hover > ul {
+		display: block;
+	}
+
+}
+
+
+
+/* ================================================ */
 /* ! Content Sections */
 /* ================================================ */
 
