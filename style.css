@@ -849,6 +849,10 @@ figcaption {
 .row:after {
   clear: both;
 }
+ul.row {
+  padding: 0;
+  list-style: none;
+}
 .cf {
   zoom: 1;
 }
@@ -892,12 +896,147 @@ a:hover {
   text-decoration: underline;
 }
 /* ================================================ */
+/* ! Abstractions */
+/* ================================================ */
+/* Margins */
+.mt {
+  margin-top: 20px;
+}
+.mt-half {
+  margin-top: 10px;
+}
+.mt-double {
+  margin-top: 40px;
+}
+.mb {
+  margin-bottom: 20px;
+}
+.mb-half {
+  margin-bottom: 10px;
+}
+.mb-double {
+  margin-bottom: 40px;
+}
+.ml {
+  margin-left: 20px;
+}
+.ml-half {
+  margin-left: 10px;
+}
+.ml-double {
+  margin-left: 40px;
+}
+.mr {
+  margin-right: 20px;
+}
+.mr-half {
+  margin-right: 10px;
+}
+.mr-double {
+  margin-right: 40px;
+}
+/* Paddings */
+.pt {
+  margin-top: 20px;
+}
+.pt-half {
+  margin-top: 10px;
+}
+.pt-double {
+  margin-top: 40px;
+}
+.pb {
+  margin-bottom: 20px;
+}
+.pb-half {
+  margin-bottom: 10px;
+}
+.pb-double {
+  margin-bottom: 40px;
+}
+.pl {
+  margin-left: 20px;
+}
+.pl-half {
+  margin-left: 10px;
+}
+.pl-double {
+  margin-left: 40px;
+}
+.pr {
+  margin-right: 20px;
+}
+.pr-half {
+  margin-right: 10px;
+}
+.pr-double {
+  margin-right: 40px;
+}
+/* Styling */
+.uppercase {
+  text-transform: uppercase;
+}
+/* Navigations */
+.nav {
+  zoom: 1;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.nav:before,
+.nav:after {
+  content: '';
+  display: table;
+}
+.nav:after {
+  clear: both;
+}
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav > li {
+  float: left;
+}
+.nav a {
+  display: inline-block;
+}
+.nav-dropdown > li > ul {
+  top: 100%;
+}
+.nav-dropdown ul {
+  width: 100px;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+.nav-dropdown ul ul {
+  top: 0;
+  left: 100%;
+}
+.nav-dropdown ul a,
+.nav-dropdown ul li {
+  display: block;
+}
+.nav-dropdown li {
+  position: relative;
+}
+.nav-dropdown a:focus + ul {
+  display: block;
+}
+.nav-dropdown li:hover > ul {
+  display: block;
+}
+/* ================================================ */
 /* ! Content Sections */
 /* ================================================ */
 /* Reusable */
 .inside {
-  margin: 0 auto;
-  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
 }
 /* Main content section */
 /* Sidebar area */
@@ -987,7 +1126,13 @@ h2 a,
 h3 a,
 h4 a,
 h5 a,
-h6 a {
+h6 a,
+.h1 a,
+.h2 a,
+.h3 a,
+.h4 a,
+.h5 a,
+.h6 a {
   transition: ease-in-out all 0.3s;
   -moz-transition: ease-in-out all 0.3s;
   -webkit-transition: ease-in-out all 0.3s;
@@ -997,8 +1142,83 @@ h2 a:hover,
 h3 a:hover,
 h4 a:hover,
 h5 a:hover,
-h6 a:hover {
+h6 a:hover,
+.h1 a:hover,
+.h2 a:hover,
+.h3 a:hover,
+.h4 a:hover,
+.h5 a:hover,
+.h6 a:hover {
   text-decoration: none;
+}
+/* ================================================ */
+/* ! Forms */
+/* ================================================ */
+.form {
+  margin-bottom: 20px;
+}
+.form-field {
+  zoom: 1;
+  margin-bottom: 10px;
+}
+.form-field:before,
+.form-field:after {
+  content: '';
+  display: table;
+}
+.form-field:after {
+  clear: both;
+}
+.form-label-fixed {
+  float: left;
+  display: inline-block;
+  width: 150px;
+  margin-right: 10px;
+}
+.form-label-fixed + div {
+  float: left;
+}
+/* Error Messages */
+.form-message-error {
+  color: #e61919;
+}
+/* ================================================ */
+/* ! Lists */
+/* ================================================ */
+.clean-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* ================================================ */
+/* ! Media Object */
+/* ================================================ */
+.media {
+  zoom: 1;
+}
+.media:before,
+.media:after {
+  content: '';
+  display: table;
+}
+.media:after {
+  clear: both;
+}
+.media .bd {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1;
+}
+.media .img img {
+  display: block;
+}
+.media .img {
+  float: left;
+  margin-right: 10px;
+}
+.media .imgExt {
+  float: right;
+  margin-left: 10px;
 }
 /* ================================================ */
 /* ! Images */
@@ -1539,7 +1759,7 @@ input[type=submit].btn::-moz-focus-inner {
   text-align: right;
 }
 /* Images */
-img {
+img.aligncenter {
   margin: 0;
   height: auto;
   width: auto;
