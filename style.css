@@ -937,40 +937,40 @@ a:hover {
 }
 /* Paddings */
 .pt {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 .pt-half {
-  margin-top: 10px;
+  padding-top: 10px;
 }
 .pt-double {
-  margin-top: 40px;
+  padding-top: 40px;
 }
 .pb {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 .pb-half {
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 .pb-double {
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 .pl {
-  margin-left: 20px;
+  padding-left: 20px;
 }
 .pl-half {
-  margin-left: 10px;
+  padding-left: 10px;
 }
 .pl-double {
-  margin-left: 40px;
+  padding-left: 40px;
 }
 .pr {
-  margin-right: 20px;
+  padding-right: 20px;
 }
 .pr-half {
-  margin-right: 10px;
+  padding-right: 10px;
 }
 .pr-double {
-  margin-right: 40px;
+  padding-right: 40px;
 }
 /* Styling */
 .uppercase {
