@@ -62,10 +62,34 @@
 
 .row {
 	.cf;
-//	position: relative;
-//	overflow: hidden;
 	margin-left: @gridGutter * -@gridUnit;
 	width: (@gridWidth + @gridGutter) * @gridUnit;
+}
+.row-inverted {
+	.cf;
+	margin-right: @gridGutter * -@gridUnit;
+	width: (@gridWidth + @gridGutter) * @gridUnit;
+
+	.column-1 	,
+	.column-2 	,
+	.column-3 	,
+	.column-4 	,
+	.column-5 	,
+	.column-6 	,
+	.column-7 	,
+	.column-8 	,
+	.column-9 	,
+	.column-10	,
+	.column-11	,
+	.column-12	,
+	.column-13	,
+	.column-14	,
+	.column-15	,
+	.column-16	{
+		float: right;
+		margin-left: 0;
+		margin-right: @gridGutter * @gridUnit;
+	}
 }
 ul.row {
 	padding: 0;

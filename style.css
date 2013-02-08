@@ -848,6 +848,39 @@ figcaption {
 .row:after {
   clear: both;
 }
+.row-inverted {
+  zoom: 1;
+  margin-right: -1.2345679012345678%;
+  width: 101.23456790123457%;
+}
+.row-inverted:before,
+.row-inverted:after {
+  content: '';
+  display: table;
+}
+.row-inverted:after {
+  clear: both;
+}
+.row-inverted .column-1,
+.row-inverted .column-2,
+.row-inverted .column-3,
+.row-inverted .column-4,
+.row-inverted .column-5,
+.row-inverted .column-6,
+.row-inverted .column-7,
+.row-inverted .column-8,
+.row-inverted .column-9,
+.row-inverted .column-10,
+.row-inverted .column-11,
+.row-inverted .column-12,
+.row-inverted .column-13,
+.row-inverted .column-14,
+.row-inverted .column-15,
+.row-inverted .column-16 {
+  float: right;
+  margin-left: 0;
+  margin-right: 1.2345679012345678%;
+}
 ul.row {
   padding: 0;
   list-style: none;
