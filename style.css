@@ -768,52 +768,52 @@ figcaption {
   background: #eee;
 }
 .column-1 {
-  width: 7.098765432098766%;
+  width: 6.275720164609054%;
 }
 .column-2 {
-  width: 15.4320987654321%;
+  width: 14.609053497942387%;
 }
 .column-3 {
-  width: 23.765432098765434%;
+  width: 22.94238683127572%;
 }
 .column-4 {
-  width: 32.098765432098766%;
+  width: 31.275720164609055%;
 }
 .column-5 {
-  width: 40.4320987654321%;
+  width: 39.60905349794239%;
 }
 .column-6 {
-  width: 48.76543209876543%;
+  width: 47.94238683127572%;
 }
 .column-7 {
-  width: 57.098765432098766%;
+  width: 56.275720164609055%;
 }
 .column-8 {
-  width: 65.4320987654321%;
+  width: 64.6090534979424%;
 }
 .column-9 {
-  width: 73.76543209876543%;
+  width: 72.94238683127573%;
 }
 .column-10 {
-  width: 82.09876543209877%;
+  width: 81.27572016460907%;
 }
 .column-11 {
-  width: 90.4320987654321%;
+  width: 89.6090534979424%;
 }
 .column-12 {
-  width: 98.76543209876543%;
+  width: 97.94238683127573%;
 }
 .column-13 {
-  width: 107.09876543209877%;
+  width: 106.27572016460907%;
 }
 .column-14 {
-  width: 115.4320987654321%;
+  width: 114.6090534979424%;
 }
 .column-15 {
-  width: 123.76543209876544%;
+  width: 122.94238683127574%;
 }
 .column-16 {
-  width: 132.0987654320988%;
+  width: 131.27572016460906%;
 }
 .column-1,
 .column-2,
@@ -833,12 +833,12 @@ figcaption {
 .column-16 {
   float: left;
   position: relative;
-  margin-left: 1.2345679012345678%;
+  margin-left: 2.05761316872428%;
 }
 .row {
   zoom: 1;
-  margin-left: -1.2345679012345678%;
-  width: 101.23456790123457%;
+  margin-left: -2.05761316872428%;
+  width: 102.05761316872427%;
 }
 .row:before,
 .row:after {
@@ -850,8 +850,8 @@ figcaption {
 }
 .row-inverted {
   zoom: 1;
-  margin-right: -1.2345679012345678%;
-  width: 101.23456790123457%;
+  margin-right: -2.05761316872428%;
+  width: 102.05761316872427%;
 }
 .row-inverted:before,
 .row-inverted:after {
@@ -879,11 +879,226 @@ figcaption {
 .row-inverted .column-16 {
   float: right;
   margin-left: 0;
-  margin-right: 1.2345679012345678%;
+  margin-right: 2.05761316872428%;
 }
 ul.row {
   padding: 0;
   list-style: none;
+}
+@media only screen and (max-width: 768px) {
+  .tablet-column-1 {
+    width: 6.275720164609054%;
+  }
+  .tablet-column-2 {
+    width: 14.609053497942387%;
+  }
+  .tablet-column-3 {
+    width: 22.94238683127572%;
+  }
+  .tablet-column-4 {
+    width: 31.275720164609055%;
+  }
+  .tablet-column-5 {
+    width: 39.60905349794239%;
+  }
+  .tablet-column-6 {
+    width: 47.94238683127572%;
+  }
+  .tablet-column-7 {
+    width: 56.275720164609055%;
+  }
+  .tablet-column-8 {
+    width: 64.6090534979424%;
+  }
+  .tablet-column-9 {
+    width: 72.94238683127573%;
+  }
+  .tablet-column-10 {
+    width: 81.27572016460907%;
+  }
+  .tablet-column-11 {
+    width: 89.6090534979424%;
+  }
+  .tablet-column-12 {
+    width: 97.94238683127573%;
+  }
+  .tablet-column-13 {
+    width: 106.27572016460907%;
+  }
+  .tablet-column-14 {
+    width: 114.6090534979424%;
+  }
+  .tablet-column-15 {
+    width: 122.94238683127574%;
+  }
+  .tablet-column-16 {
+    width: 131.27572016460906%;
+  }
+  .medium-column-1 {
+    width: 6.275720164609054%;
+  }
+  .medium-column-2 {
+    width: 14.609053497942387%;
+  }
+  .medium-column-3 {
+    width: 22.94238683127572%;
+  }
+  .medium-column-4 {
+    width: 31.275720164609055%;
+  }
+  .medium-column-5 {
+    width: 39.60905349794239%;
+  }
+  .medium-column-6 {
+    width: 47.94238683127572%;
+  }
+  .medium-column-7 {
+    width: 56.275720164609055%;
+  }
+  .medium-column-8 {
+    width: 64.6090534979424%;
+  }
+  .medium-column-9 {
+    width: 72.94238683127573%;
+  }
+  .medium-column-10 {
+    width: 81.27572016460907%;
+  }
+  .medium-column-11 {
+    width: 89.6090534979424%;
+  }
+  .medium-column-12 {
+    width: 97.94238683127573%;
+  }
+  .medium-column-13 {
+    width: 106.27572016460907%;
+  }
+  .medium-column-14 {
+    width: 114.6090534979424%;
+  }
+  .medium-column-15 {
+    width: 122.94238683127574%;
+  }
+  .medium-column-16 {
+    width: 131.27572016460906%;
+  }
+  .tablet-hidden,
+  .medium-hidden {
+    display: none;
+  }
+  .tablet-visible,
+  .medium-visible {
+    display: block;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .mobile-column-1 {
+    width: 6.275720164609054%;
+  }
+  .mobile-column-2 {
+    width: 14.609053497942387%;
+  }
+  .mobile-column-3 {
+    width: 22.94238683127572%;
+  }
+  .mobile-column-4 {
+    width: 31.275720164609055%;
+  }
+  .mobile-column-5 {
+    width: 39.60905349794239%;
+  }
+  .mobile-column-6 {
+    width: 47.94238683127572%;
+  }
+  .mobile-column-7 {
+    width: 56.275720164609055%;
+  }
+  .mobile-column-8 {
+    width: 64.6090534979424%;
+  }
+  .mobile-column-9 {
+    width: 72.94238683127573%;
+  }
+  .mobile-column-10 {
+    width: 81.27572016460907%;
+  }
+  .mobile-column-11 {
+    width: 89.6090534979424%;
+  }
+  .mobile-column-12 {
+    width: 97.94238683127573%;
+  }
+  .mobile-column-13 {
+    width: 106.27572016460907%;
+  }
+  .mobile-column-14 {
+    width: 114.6090534979424%;
+  }
+  .mobile-column-15 {
+    width: 122.94238683127574%;
+  }
+  .mobile-column-16 {
+    width: 131.27572016460906%;
+  }
+  .small-column-1 {
+    width: 6.275720164609054%;
+  }
+  .small-column-2 {
+    width: 14.609053497942387%;
+  }
+  .small-column-3 {
+    width: 22.94238683127572%;
+  }
+  .small-column-4 {
+    width: 31.275720164609055%;
+  }
+  .small-column-5 {
+    width: 39.60905349794239%;
+  }
+  .small-column-6 {
+    width: 47.94238683127572%;
+  }
+  .small-column-7 {
+    width: 56.275720164609055%;
+  }
+  .small-column-8 {
+    width: 64.6090534979424%;
+  }
+  .small-column-9 {
+    width: 72.94238683127573%;
+  }
+  .small-column-10 {
+    width: 81.27572016460907%;
+  }
+  .small-column-11 {
+    width: 89.6090534979424%;
+  }
+  .small-column-12 {
+    width: 97.94238683127573%;
+  }
+  .small-column-13 {
+    width: 106.27572016460907%;
+  }
+  .small-column-14 {
+    width: 114.6090534979424%;
+  }
+  .small-column-15 {
+    width: 122.94238683127574%;
+  }
+  .small-column-16 {
+    width: 131.27572016460906%;
+  }
+  .mobile-hidden,
+  .small-hidden {
+    display: none;
+  }
+  .mobile-visible,
+  .small-visible {
+    display: block;
+  }
+}
+@media only screen and (min-width: 768px) {
+  
 }
 .cf {
   zoom: 1;
@@ -1255,9 +1470,20 @@ h6 a:hover,
 /* ================================================ */
 /* ! Images */
 /* ================================================ */
+.img-auto,
 .auto-img {
   max-width: 100%;
   height: auto;
+}
+.img-holder {
+  display: block;
+  border-bottom: 1px solid #9d261d;
+}
+.img-center {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* ================================================ */
 /* ! Footer */
@@ -2100,6 +2326,10 @@ li.sfHover > a > .sf-sub-indicator {
    Print styles.
    Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
+.print-only,
+.print-show {
+  display: none;
+}
 @media print {
   * {
     background: transparent !important;
@@ -2154,5 +2384,12 @@ li.sfHover > a > .sf-sub-indicator {
   h2,
   h3 {
     page-break-after: avoid;
+  }
+  .print-only,
+  .print-show {
+    display: block !important;
+  }
+  .print-hide {
+    display: none;
   }
 }
