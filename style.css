@@ -735,7 +735,6 @@ figcaption {
 /* ================================================ */
 /* ! Table */
 /* ================================================ */
-.table,
 .table th,
 .table tr,
 .table td {
@@ -766,6 +765,58 @@ figcaption {
 }
 .table tfoot tr {
   background: #eee;
+}
+/* ================================================ */
+/* ! Helper Classes */
+/* ================================================ */
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.cm {
+  margin: 0;
+}
+.clear-list {
+  list-style: none;
+  padding: 0;
+}
+.clear-list li {
+  list-style: none;
+}
+/* ================================================ */
+/* ! Alignments */
+/* ================================================ */
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.img-auto {
+  max-width: 100%;
+  height: auto;
+}
+.img-left {
+  float: left;
+  margin-right: 20px;
+}
+.img-right {
+  float: right;
+  margin-left: 20px;
+}
+.img-center {
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: auto;
 }
 .column-1 {
   width: 6.275720164609054%;
@@ -2010,57 +2061,6 @@ input[type=submit].btn::-moz-focus-inner {
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 /* ================================================ */
-/* ! Alignments */
-/* ================================================ */
-.textcenter {
-  display: block;
-  text-align: center;
-}
-.textright {
-  display: block;
-  text-align: right;
-}
-/* Images */
-img.aligncenter {
-  margin: 0;
-  height: auto;
-  width: auto;
-}
-.alignleft,
-img.alignleft {
-  display: inline;
-  float: left;
-  margin-right: 20px;
-  margin-top: 0px;
-}
-.alignright,
-img.alignright {
-  display: inline;
-  float: right;
-  margin-left: 20px;
-  margin-top: 0px;
-}
-.aligncenter,
-img.aligncenter {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-img.alignleft,
-img.alignright,
-img.aligncenter {
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-.wp-caption img {
-  margin-bottom: 10px;
-}
-.wp-caption .wp-caption-text {
-  text-align: center;
-  color: #999;
-}
-/* ================================================ */
 /* ! Tabs */
 /* ================================================ */
 .tabs {
@@ -2302,25 +2302,6 @@ li.sfHover > a > .sf-sub-indicator {
   background-position: -10px 0;
   /* arrow hovers for modern browsers*/
 
-}
-/* ================================================ */
-/* ! Helper Classes */
-/* ================================================ */
-.fr {
-  float: right;
-}
-.fl {
-  float: left;
-}
-.cm {
-  margin: 0;
-}
-.clear-list {
-  list-style: none;
-  padding: 0;
-}
-.clear-list li {
-  list-style: none;
 }
 /* =============================================================================
    Print styles.
